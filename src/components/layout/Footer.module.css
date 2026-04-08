@@ -1,0 +1,125 @@
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 80px 0 0;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand {}
+
+.logoBox {
+  font-family: var(--font-display);
+  font-size: 48px;
+  letter-spacing: 0.06em;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.brand > p {
+  font-family: var(--font-cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-size: 16px !important;
+  color: var(--white) !important;
+  margin-bottom: 24px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  line-height: 1.5 !important;
+}
+
+.col h4 {
+  font-family: var(--font-cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.col a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s;
+}
+
+.col a:hover { color: var(--yellow); }
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px !important;
+}
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+}
+
+.contactList svg { color: var(--yellow); flex-shrink: 0; }
+
+.social {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  color: rgba(255,255,255,0.6) !important;
+  transition: all 0.2s;
+}
+
+.social a:hover {
+  border-color: var(--yellow);
+  color: var(--yellow) !important;
+  background: rgba(255,237,0,0.06);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 1024px) {
+  .top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .top { grid-template-columns: 1fr; gap: 32px; }
+  .bottom { flex-direction: column; gap: 8px; text-align: center; }
+}

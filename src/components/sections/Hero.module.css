@@ -1,91 +1,225 @@
-import Link from 'next/link';
-import { WA_LINK } from '@/lib/data';
-import styles from './Hero.module.css';
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 72px;
+}
 
-export default function Hero() {
-  return (
-    <section className={styles.hero}>
-      <div className={styles.grid} aria-hidden />
-      <div className={`container ${styles.inner}`}>
-        <div className={styles.content}>
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
 
-          <div className={`tag ${styles.tag}`}>
-            Para empresas que já investem em marketing e não escalam
-          </div>
+.inner {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 0;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
 
-          <h1 className={`display ${styles.heading}`}>
-            PARE DE INVESTIR EM MARKETING SEM{' '}
-            <span className={styles.highlight}>RESULTADO</span>
-          </h1>
+.content {
+  padding-right: 32px;
+}
 
-          <p className={styles.sub}>
-            Ajudamos empresas a transformar tráfego em clientes todos os dias
-            com estratégia, automação e campanhas que realmente convertem.
-          </p>
+.tag {
+  color: var(--black);
+  border-color: rgba(0,0,0,0.3);
+  animation: fadeUp 0.5s ease both;
+}
 
-          <div className={styles.actions}>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="btn btn--primary btn--lg"
-            >
-              Quero mais clientes
-            </a>
-            <Link href="/portfolio" className="btn btn--outline btn--lg">
-              Ver resultados reais
-            </Link>
-          </div>
+.heading {
+  font-size: clamp(40px, 4vw, 64px);
+  color: var(--black);
+  margin: 20px 0 24px;
+  line-height: 1.05;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
 
-          <div className={styles.stats}>
-            <div className={styles.stat}>
-              <strong>+50</strong>
-              <span>Empresas atendidas</span>
-            </div>
-            <div className={styles.statDivider} />
-            <div className={styles.stat}>
-              <strong>R$2M+</strong>
-              <span>Gerados em anúncios</span>
-            </div>
-            <div className={styles.statDivider} />
-            <div className={styles.stat}>
-              <strong>+30%</strong>
-              <span>Média de crescimento</span>
-            </div>
-          </div>
+.highlight {
+  color: var(--white);
+  display: inline;
+}
 
-          <p className={styles.microProof}>
-            ⚡ Diagnóstico gratuito • Resposta rápida no WhatsApp
-          </p>
-        </div>
+.sub {
+  font-size: clamp(15px, 1.1vw, 18px);
+  color: rgba(0,0,0,0.7);
+  max-width: 440px;
+  line-height: 1.65;
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
 
-        <div className={styles.visual} aria-hidden>
-          <div className={styles.logoHero}>
-            <span>FL</span>
-            <div className={styles.skateIcon}>
-              <svg viewBox="0 0 80 80" fill="none">
-                <ellipse cx="40" cy="40" rx="14" ry="36" fill="#0a0a0a" />
-                <circle cx="40" cy="16" r="4" fill="#FFED00"/>
-                <circle cx="40" cy="64" r="4" fill="#FFED00"/>
-                <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#0a0a0a" strokeWidth="3"/>
-              </svg>
-            </div>
-            <span>P</span>
-          </div>
-          <div className={styles.marqueeWrap}>
-            <div className={styles.marquee}>
-              {Array(8).fill('FLIP — MARKETING & PUBLICIDADE — ').map((t, i) => (
-                <span key={i}>{t}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
 
-      <div className={styles.scroll} aria-hidden>
-        <span>scroll</span>
-        <div className={styles.scrollLine} />
-      </div>
-    </section>
-  );
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 2px solid rgba(0,0,0,0.12);
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat strong {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 32px);
+  line-height: 1;
+  color: var(--black);
+}
+
+.stat span {
+  font-size: 11px;
+  color: rgba(0,0,0,0.55);
+  font-family: var(--font-cond);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.microProof {
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.5);
+  animation: fadeUp 0.6s 0.5s ease both;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s 0.2s ease both;
+  overflow: visible;
+}
+
+.logoHero {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: clamp(80px, 10vw, 160px);
+  color: var(--black);
+  line-height: 0.9;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.skateIcon {
+  width: clamp(52px, 7vw, 106px);
+  height: clamp(52px, 7vw, 106px);
+  animation: spin 6s linear infinite;
+  flex-shrink: 0;
+}
+
+.skateIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.marqueeWrap {
+  width: 120%;
+  overflow: hidden;
+  margin-top: 32px;
+  background: var(--black);
+  padding: 12px 0;
+  transform: rotate(-2deg);
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 16s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee span {
+  font-family: var(--font-cond);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  padding: 0 6px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 1s 0.8s ease both;
+}
+
+.scroll span {
+  font-family: var(--font-cond);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+  animation: fadeUp 1.5s 1s ease infinite;
+}
+
+@media (max-width: 1100px) {
+  .inner { grid-template-columns: 60% 40%; }
+  .heading { font-size: clamp(36px, 3.5vw, 56px); }
+}
+
+@media (max-width: 900px) {
+  .inner { grid-template-columns: 1fr; }
+  .visual { display: none; }
+  .content { padding-right: 0; text-align: center; }
+  .sub { margin-left: auto; margin-right: auto; }
+  .actions { justify-content: center; }
+  .stats { justify-content: center; }
+  .microProof { text-align: center; }
+  .heading { font-size: clamp(36px, 6vw, 52px); }
+}
+
+@media (max-width: 480px) {
+  .heading { font-size: 32px; }
+  .actions { flex-direction: column; }
+  .actions .btn { width: 100%; justify-content: center; }
+  .stats { gap: 12px; flex-wrap: wrap; }
+  .statDivider { display: none; }
 }

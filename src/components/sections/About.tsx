@@ -37,7 +37,6 @@ export default function About() {
               Conhecer a equipe
             </a>
           </div>
-
           <div className={styles.right}>
             <div className={styles.difsGrid}>
               {DIFERENCIAIS.map((d) => (
@@ -48,10 +47,9 @@ export default function About() {
                 </div>
               ))}
             </div>
-
             <div className={styles.logoBlock} aria-hidden>
               <span className={styles.logoText}>FLIP</span>
-              <span className={styles.logoSince}>est. 2024 — Maringá, PR</span>
+              <span className={styles.logoSince}>est. 2024 — Curitiba, PR</span>
             </div>
           </div>
         </div>

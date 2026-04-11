@@ -5,10 +5,9 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 72px; /* navbar height */
+  padding-top: 72px;
 }
 
-/* Grid background */
 .grid {
   position: absolute;
   inset: 0;
@@ -30,7 +29,6 @@
   z-index: 1;
 }
 
-/* Content side */
 .content {}
 
 .tag {
@@ -46,12 +44,10 @@
   animation: fadeUp 0.6s 0.1s ease both;
 }
 
+/* RESULTADO — branco puro, sem caixa, sem contorno */
 .highlight {
-  color: var(--black);
-  background: var(--white);
-  padding: 0 12px;
+  color: var(--white);
   display: inline-block;
-  line-height: 1.05;
 }
 
 .sub {
@@ -108,6 +104,13 @@
   background: rgba(0,0,0,0.15);
 }
 
+.microProof {
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.5);
+  animation: fadeUp 0.6s 0.5s ease both;
+}
+
 /* Visual side */
 .visual {
   position: relative;
@@ -120,17 +123,16 @@
 .logoHero {
   display: flex;
   align-items: center;
-  gap: 0;
   font-family: var(--font-display);
-  font-size: clamp(96px, 12vw, 160px);
+  font-size: clamp(96px, 10vw, 160px);
   color: var(--black);
   line-height: 0.9;
   user-select: none;
 }
 
 .skateIcon {
-  width: clamp(64px, 8vw, 104px);
-  height: clamp(64px, 8vw, 104px);
+  width: clamp(64px, 7vw, 104px);
+  height: clamp(64px, 7vw, 104px);
   animation: spin 6s linear infinite;
 }
 
@@ -139,7 +141,6 @@
   height: 100%;
 }
 
-/* Marquee */
 .marqueeWrap {
   width: 100%;
   overflow: hidden;
@@ -151,7 +152,6 @@
 
 .marquee {
   display: flex;
-  gap: 0;
   animation: marquee 14s linear infinite;
   white-space: nowrap;
 }
@@ -163,10 +163,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--yellow);
-  padding-right: 0;
 }
 
-/* Scroll indicator */
 .scroll {
   position: absolute;
   bottom: 32px;
@@ -195,6 +193,12 @@
   animation: fadeUp 1.5s 1s ease infinite;
 }
 
+/* Logo aparece acima de 1280px */
+@media (max-width: 1280px) {
+  .logoHero { font-size: clamp(72px, 8vw, 120px); }
+  .skateIcon { width: clamp(48px, 6vw, 80px); height: clamp(48px, 6vw, 80px); }
+}
+
 @media (max-width: 1024px) {
   .inner { grid-template-columns: 1fr; gap: 40px; }
   .visual { display: none; }
@@ -202,10 +206,11 @@
   .sub { margin-left: auto; margin-right: auto; }
   .actions { justify-content: center; }
   .stats { justify-content: center; }
+  .microProof { text-align: center; }
 }
 
 @media (max-width: 640px) {
-  .heading { font-size: 52px; }
+  .heading { font-size: 48px; }
   .actions { flex-direction: column; }
   .actions .btn { width: 100%; justify-content: center; }
   .stats { gap: 16px; }

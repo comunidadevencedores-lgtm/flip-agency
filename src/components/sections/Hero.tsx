@@ -64,7 +64,7 @@ export default function Hero() {
         <div className={styles.visual} aria-hidden>
           <div className={styles.logoHero}>
             <Image
-  src={scrolled ? "/logo-branca.png" : "/logoflip.jpeg"}
+ src="/logoflip.jpeg"
   alt="FLIP Marketing & Publicidade"
   width={640}
   height={3200}

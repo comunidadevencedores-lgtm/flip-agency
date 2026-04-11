@@ -30,14 +30,16 @@ export default function Navbar() {
         <nav className={styles.nav}>
           {/* Logo */}
           <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
-            <Image
-              src="/logoflip.jpeg"
-              alt={SITE.fullName}
-              width={120}
-              height={48}
-              className={styles.logoImg}
-              priority
-            />
+           <Image
+  src="/logoflip.jpeg"
+  alt={SITE.fullName}
+  height={50}
+  width={0}
+  sizes="100vw"
+  className={styles.logoImg}
+  priority
+  style={{ width: "auto", height: "50px" }}
+/>
           </Link>
 
           {/* Desktop Links */}

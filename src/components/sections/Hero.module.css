@@ -47,9 +47,11 @@
 }
 
 .highlight {
-  color: var(--white);
-  -webkit-text-stroke: 3px var(--black);
+  color: var(--black);
+  background: var(--white);
+  padding: 0 12px;
   display: inline-block;
+  line-height: 1.05;
 }
 
 .sub {
@@ -204,7 +206,6 @@
 
 @media (max-width: 640px) {
   .heading { font-size: 52px; }
-  .highlight { -webkit-text-stroke: 2px var(--black); }
   .actions { flex-direction: column; }
   .actions .btn { width: 100%; justify-content: center; }
   .stats { gap: 16px; }

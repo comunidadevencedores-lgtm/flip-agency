@@ -66,10 +66,10 @@ export default function Hero() {
             <Image
   src="/logoflip.jpeg"
   alt="FLIP Marketing & Publicidade"
-  width={320}
-  height={160}
+  width={640}
+  height={3200}
   className={styles.logoImg}
-  style={{ width: 'auto', height: 'auto', maxWidth: '320px', maxHeight: '160px' }}
+  style={{ width: 'auto', height: 'auto', maxWidth: '640px', maxHeight: '3200px' }}
   priority
 />
           </div>

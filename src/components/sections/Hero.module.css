@@ -223,3 +223,11 @@
   .stats { gap: 12px; flex-wrap: wrap; }
   .statDivider { display: none; }
 }
+
+/* Logo image no hero */
+.logoImg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+}

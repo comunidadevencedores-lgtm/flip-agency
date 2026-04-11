@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE, WA_LINK } from '@/lib/data';
 import styles from './Navbar.module.css';
 
@@ -29,8 +30,14 @@ export default function Navbar() {
         <nav className={styles.nav}>
           {/* Logo */}
           <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
-            <span className={styles.logoBox}>FLIP</span>
-            <span className={styles.logoSub}>Marketing &amp; Publicidade</span>
+            <Image
+              src="/logoflip.jpeg"
+              alt={SITE.fullName}
+              width={120}
+              height={48}
+              className={styles.logoImg}
+              priority
+            />
           </Link>
 
           {/* Desktop Links */}

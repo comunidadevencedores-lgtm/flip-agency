@@ -31,7 +31,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
            <Image
-  src="/logoflip.jpeg"
+ src={scrolled ? "/logo-branca.png" : "/logoflip.jpeg"}
   alt={SITE.fullName}
   height={180}
   width={0}

@@ -70,7 +70,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>© {year} {SITE.fullName}. Todos os direitos reservados.</p>
-          <p>Feito com 🛹 em Maringá, PR</p>
+          <p>Feito com 🛹 em Curitiba, PR</p>
         </div>
       </div>
     </footer>

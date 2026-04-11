@@ -64,13 +64,14 @@ export default function Hero() {
         <div className={styles.visual} aria-hidden>
           <div className={styles.logoHero}>
             <Image
-              src="/logoflip.jpeg"
-              alt="FLIP Marketing & Publicidade"
-              width={480}
-              height={200}
-              className={styles.logoImg}
-              priority
-            />
+  src="/logoflip.jpeg"
+  alt="FLIP Marketing & Publicidade"
+  width={320}
+  height={160}
+  className={styles.logoImg}
+  style={{ width: 'auto', height: 'auto', maxWidth: '320px', maxHeight: '160px' }}
+  priority
+/>
           </div>
           <div className={styles.marqueeWrap}>
             <div className={styles.marquee}>

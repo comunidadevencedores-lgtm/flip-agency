@@ -21,12 +21,13 @@
 .inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
   padding-top: 48px;
   padding-bottom: 80px;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .content {}
@@ -38,20 +39,22 @@
 }
 
 .heading {
-  font-size: clamp(56px, 8vw, 104px);
+  /* Controlado: não passa de 72px em 1920px, mas escala bem */
+  font-size: clamp(36px, 4.5vw, 72px);
   color: var(--black);
   margin: 20px 0 24px;
+  line-height: 1;
   animation: fadeUp 0.6s 0.1s ease both;
 }
 
-/* RESULTADO — branco puro, sem caixa, sem contorno */
+/* RESULTADO — branco puro no amarelo */
 .highlight {
   color: var(--white);
   display: inline-block;
 }
 
 .sub {
-  font-size: 18px;
+  font-size: clamp(15px, 1.2vw, 18px);
   color: rgba(0,0,0,0.7);
   max-width: 480px;
   line-height: 1.65;
@@ -84,13 +87,13 @@
 
 .stat strong {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: clamp(24px, 2vw, 32px);
   line-height: 1;
   color: var(--black);
 }
 
 .stat span {
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(0,0,0,0.55);
   font-family: var(--font-cond);
   font-weight: 700;
@@ -111,29 +114,33 @@
   animation: fadeUp 0.6s 0.5s ease both;
 }
 
-/* Visual side */
+/* ── Visual (lado direito) ── */
 .visual {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   animation: fadeIn 0.8s 0.2s ease both;
+  min-height: 300px;
 }
 
 .logoHero {
   display: flex;
   align-items: center;
   font-family: var(--font-display);
-  font-size: clamp(96px, 10vw, 160px);
+  font-size: clamp(80px, 9vw, 148px);
   color: var(--black);
   line-height: 0.9;
   user-select: none;
+  white-space: nowrap;
 }
 
 .skateIcon {
-  width: clamp(64px, 7vw, 104px);
-  height: clamp(64px, 7vw, 104px);
+  width: clamp(56px, 6.5vw, 100px);
+  height: clamp(56px, 6.5vw, 100px);
   animation: spin 6s linear infinite;
+  flex-shrink: 0;
 }
 
 .skateIcon svg {
@@ -141,8 +148,9 @@
   height: 100%;
 }
 
+/* Marquee */
 .marqueeWrap {
-  width: 100%;
+  width: 110%;
   overflow: hidden;
   margin-top: 32px;
   background: var(--black);
@@ -159,12 +167,14 @@
 .marquee span {
   font-family: var(--font-cond);
   font-weight: 900;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--yellow);
+  padding: 0 8px;
 }
 
+/* Scroll indicator */
 .scroll {
   position: absolute;
   bottom: 32px;
@@ -193,25 +203,34 @@
   animation: fadeUp 1.5s 1s ease infinite;
 }
 
-/* Logo aparece acima de 1280px */
-@media (max-width: 1280px) {
-  .logoHero { font-size: clamp(72px, 8vw, 120px); }
-  .skateIcon { width: clamp(48px, 6vw, 80px); height: clamp(48px, 6vw, 80px); }
+/* ── Responsivo ── */
+
+/* Tablet landscape / desktop pequeno */
+@media (max-width: 1200px) {
+  .inner { gap: 32px; }
+  .heading { font-size: clamp(32px, 4vw, 60px); }
 }
 
-@media (max-width: 1024px) {
-  .inner { grid-template-columns: 1fr; gap: 40px; }
+/* Tablet portrait — some logo, centraliza conteúdo */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
   .visual { display: none; }
   .content { text-align: center; }
   .sub { margin-left: auto; margin-right: auto; }
   .actions { justify-content: center; }
   .stats { justify-content: center; }
   .microProof { text-align: center; }
+  .heading { font-size: clamp(36px, 6vw, 56px); }
 }
 
-@media (max-width: 640px) {
-  .heading { font-size: 48px; }
+/* Mobile */
+@media (max-width: 480px) {
+  .heading { font-size: 36px; }
   .actions { flex-direction: column; }
   .actions .btn { width: 100%; justify-content: center; }
-  .stats { gap: 16px; }
+  .stats { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .statDivider { display: none; }
 }

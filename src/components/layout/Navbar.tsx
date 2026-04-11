@@ -33,12 +33,12 @@ export default function Navbar() {
            <Image
   src="/logoflip.jpeg"
   alt={SITE.fullName}
-  height={50}
+  height={80}
   width={0}
   sizes="100vw"
   className={styles.logoImg}
   priority
-  style={{ width: "auto", height: "50px" }}
+  style={{ width: "auto", height: "80px" }}
 />
           </Link>
 

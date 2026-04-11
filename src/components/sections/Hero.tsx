@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { WA_LINK } from '@/lib/data';
 import styles from './Hero.module.css';
 
@@ -59,18 +60,17 @@ export default function Hero() {
           </p>
         </div>
 
+        {/* VISUAL — logo real */}
         <div className={styles.visual} aria-hidden>
           <div className={styles.logoHero}>
-            <span>FL</span>
-            <div className={styles.skateIcon}>
-              <svg viewBox="0 0 80 80" fill="none">
-                <ellipse cx="40" cy="40" rx="14" ry="36" fill="#0a0a0a" />
-                <circle cx="40" cy="16" r="4" fill="#FFED00"/>
-                <circle cx="40" cy="64" r="4" fill="#FFED00"/>
-                <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#0a0a0a" strokeWidth="3"/>
-              </svg>
-            </div>
-            <span>P</span>
+            <Image
+              src="/logoflip.jpeg"
+              alt="FLIP Marketing & Publicidade"
+              width={480}
+              height={200}
+              className={styles.logoImg}
+              priority
+            />
           </div>
           <div className={styles.marqueeWrap}>
             <div className={styles.marquee}>

@@ -11,7 +11,7 @@ export const SITE = {
   phone: '(41) 99873-6530',
   address: 'Curitiba, PR',
   instagram: 'https://instagram.com/flipagencia',
-  linkedin: 'https://linkedin.com/company/flipagencia',
+  linkedin: 'https://www.linkedin.com/company/aagenciaflip/',
   facebook: 'https://facebook.com/flipagencia',
 };
 

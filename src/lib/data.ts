@@ -177,7 +177,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     type: 'portfolio',
     thumbnail: '/images/port-oldschool.jpg',
     tags: ['Next.js', 'Vercel', 'Design Dark'],
-    url: 'https://barbearia-old-school.vercel.app/',
+    url: 'https://barbearia-old-school9.vercel.app/',
   },
 ];
 

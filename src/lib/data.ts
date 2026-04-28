@@ -10,9 +10,9 @@ export const SITE = {
   email: 'aagenciaflip@gmail.com',
   phone: '(41) 99873-6530',
   address: 'Curitiba, PR',
-  instagram: 'https://instagram.com/flipagencia',
+  
   linkedin: 'https://www.linkedin.com/company/aagenciaflip/',
-  facebook: 'https://facebook.com/flipagencia',
+  
 };
 
 export const WA_LINK = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(SITE.whatsappMsg)}`;
@@ -175,7 +175,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     type: 'portfolio',
     thumbnail: '/images/port-oldschool.jpg',
     tags: ['Next.js', 'Vercel', 'Design Dark'],
-    url: 'https://barbearia-old-schoolvercal.app',
+    url: 'https://barbearia-old-school.vercel.app/',
   },
 ];
 

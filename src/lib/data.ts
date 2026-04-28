@@ -5,10 +5,10 @@ export const SITE = {
   description:
     'Agência de marketing digital e publicidade em Curitiba, PR. Tráfego pago, redes sociais, sites, design, SEO, conteúdo, automação e CRM para negócios que querem crescer de verdade.',
   url: 'https://www.aagenciaflip.com.br',
-  whatsapp: '5544999999999',
+  whatsapp: '5541998736530',
   whatsappMsg: 'Olá! Vim pelo site da FLIP e gostaria de conhecer os serviços.',
-  email: 'oi@flipagencia.com.br',
-  phone: '(44) 99999-9999',
+  email: 'aagenciaflip@gmail.com',
+  phone: '(41) 99873-6530',
   address: 'Curitiba, PR',
   instagram: 'https://instagram.com/flipagencia',
   linkedin: 'https://linkedin.com/company/flipagencia',

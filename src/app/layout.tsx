@@ -26,16 +26,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.fullName} — Maringá, PR`,
+    default: `${SITE.fullName} — Curitiba, PR`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
   keywords: [
-    'agência de marketing digital maringá',
-    'tráfego pago maringá',
-    'criação de sites maringá',
+    'agência de marketing digital curitiba',
+    'tráfego pago curitiba',
+    'criação de sites curitiba',
     'gestão de redes sociais',
-    'SEO maringá',
+    'SEO curitiba',
     'publicidade digital paraná',
     'marketing para pequenas empresas',
     'FLIP marketing publicidade',
@@ -102,7 +102,7 @@ export default function RootLayout({
               description: SITE.description,
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Maringá',
+                addressLocality: 'Curitiba',
                 addressRegion: 'PR',
                 addressCountry: 'BR',
               },

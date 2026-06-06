@@ -10,9 +10,9 @@ export const SITE = {
   email: 'aagenciaflip@gmail.com',
   phone: '(41) 99873-6530',
   address: 'Curitiba, PR',
-  instagram: '',     
+  instagram: 'https://www.instagram.com/aagenciaflip/',
   linkedin: 'https://www.linkedin.com/company/aagenciaflip/',
-  facebook: ''
+  facebook: 'https://www.facebook.com/profile.php?id=61590576484511'
  
   
 };

@@ -7,7 +7,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: `Contato | ${SITE.name}`,
-  description: 'Entre em contato com a FLIP Marketing & Publicidade. Maringá, PR.',
+  description: 'Entre em contato com a FLIP Marketing & Publicidade. Curitiba, PR.',
   alternates: { canonical: `${SITE.url}/contato` },
 };
 
@@ -41,8 +41,8 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: 'Localização',
-    value: 'Maringá, PR — Brasil',
-    href: 'https://maps.google.com/?q=Maringá,PR',
+    value: 'Curitiba, PR — Brasil',
+    href: 'https://maps.google.com/?q=Curitiba,PR',
     cta: 'Ver no mapa',
   },
   {
@@ -52,7 +52,7 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: 'Instagram',
-    value: '@flipagencia',
+    value: '@aagenciaflip',
     href: SITE.instagram,
     cta: 'Seguir no Instagram',
   },

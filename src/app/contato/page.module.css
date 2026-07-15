@@ -1,0 +1,121 @@
+.main { padding-top: 72px; }
+
+.hero {
+  background: var(--black);
+  padding: 80px 0 64px;
+  border-bottom: 2px solid var(--yellow);
+}
+
+.heading {
+  font-size: clamp(64px, 10vw, 120px);
+  color: var(--white);
+  margin-top: 16px;
+  line-height: 0.9;
+}
+
+.sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 20px;
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition);
+}
+
+.card:hover {
+  border-color: var(--yellow);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  background: var(--black);
+  color: var(--white);
+}
+
+.cardIcon {
+  width: 52px;
+  height: 52px;
+  background: var(--yellow);
+  color: var(--black);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.card:hover .cardIcon {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.cardLabel {
+  font-family: var(--font-cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  display: block;
+  margin-bottom: 4px;
+  transition: color var(--transition);
+}
+
+.card:hover .cardLabel { color: rgba(255,255,255,0.4); }
+
+.cardValue {
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.cardCta {
+  font-family: var(--font-cond);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: color var(--transition);
+}
+
+.card:hover .cardCta { color: var(--yellow); }
+
+.bigCta {
+  background: var(--yellow);
+  border-radius: var(--radius-lg);
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bigCtaText p {
+  font-size: 17px;
+  color: rgba(0,0,0,0.6);
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .bigCta { flex-direction: column; padding: 40px 24px; }
+}

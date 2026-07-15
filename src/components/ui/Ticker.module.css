@@ -1,0 +1,35 @@
+.ticker {
+  background: var(--black);
+  overflow: hidden;
+  padding: 14px 0;
+  border-top: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+}
+
+.track {
+  display: flex;
+  gap: 0;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0 20px;
+  transition: color 0.2s;
+}
+
+.item:hover { color: var(--yellow); }
+
+.dot {
+  color: var(--yellow);
+  font-size: 10px;
+}

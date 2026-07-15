@@ -18,7 +18,7 @@ export default function NotFound() {
             <p>A página que você procura não existe ou foi movida. Mas a gente te leva de volta para a pista.</p>
             <div className={styles.actions}>
               <Link href="/" className="btn btn--primary btn--lg">Voltar ao início</Link>
-              <Link href="/contato" className="btn btn--outline btn--lg">Falar com a FLIP</Link>
+              <Link href="/contato" className="btn btn--outline btn--lg">Falar com a Bowl</Link>
             </div>
           </div>
         </div>

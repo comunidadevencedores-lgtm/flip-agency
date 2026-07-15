@@ -3,13 +3,13 @@ import styles from './CtaBanner.module.css';
 
 export default function CtaBanner() {
   return (
-    <section className={`section--yellow ${styles.cta}`}>
+    <section className={`section--bowl-blue ${styles.cta}`}>
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.text}>
             <div className={styles.label}>Pronto para crescer?</div>
             <h2 className={`display ${styles.heading}`}>
-              VAMOS FAZER<br />O FLIP DO<br />SEU NEGÓCIO.
+              VAMOS CONSTRUIR<br />O SISTEMA DO<br />SEU NEGÓCIO.
             </h2>
           </div>
           <div className={styles.action}>

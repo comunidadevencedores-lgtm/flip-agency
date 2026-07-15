@@ -5,7 +5,7 @@
 }
 
 .cta::before {
-  content: 'FLIP';
+  content: 'BOWL';
   position: absolute;
   right: -40px;
   top: 50%;

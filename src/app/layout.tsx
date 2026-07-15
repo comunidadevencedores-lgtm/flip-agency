@@ -2,25 +2,19 @@ import type { Metadata, Viewport } from 'next';
 import { SITE } from '@/lib/data';
 import '../styles/globals.css';
 
-import { Bebas_Neue, Inter } from 'next/font/google';
-
-const bebas = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-heading',
-});
+import { Inter } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-body',
+  weight: ['400', '500', '700', '800'],
 });
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#FFED00',
+  themeColor: '#2952FF',
 };
 
 export const metadata: Metadata = {
@@ -38,7 +32,9 @@ export const metadata: Metadata = {
     'SEO curitiba',
     'publicidade digital paraná',
     'marketing para pequenas empresas',
-    'FLIP marketing publicidade',
+    'desenvolvimento de sites curitiba',
+    'agência full service curitiba',
+    'bowl digital',
   ],
   authors: [{ name: SITE.fullName, url: SITE.url }],
   creator: SITE.fullName,
@@ -87,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${bebas.variable} ${inter.variable}`}>
+    <html lang="pt-BR" className={inter.variable}>
       <head>
         {/* Structured Data */}
         <script
@@ -95,10 +91,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'MarketingAgency',
+              '@type': ['MarketingAgency', 'ProfessionalService'],
               name: SITE.fullName,
               url: SITE.url,
-              logo: `${SITE.url}/logo.png`,
+              logo: `${SITE.url}/logo-bowl-digital.png`,
               description: SITE.description,
               address: {
                 '@type': 'PostalAddress',

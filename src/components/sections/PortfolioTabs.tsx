@@ -101,7 +101,7 @@ export default function PortfolioTabs() {
         <div className={styles.cta}>
           <p>Quer resultados como esses para o seu negócio?</p>
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
-            Falar com a FLIP
+            Falar com a Bowl
           </a>
         </div>
       </div>

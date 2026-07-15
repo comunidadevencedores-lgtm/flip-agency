@@ -16,8 +16,8 @@ export default function Packages() {
             <div
               key={pkg.name}
               className={`${styles.card} ${pkg.highlight ? styles.featured : ''}`}
-              style={pkg.color !== '#f0f0f0' && pkg.color !== '#FFED00'
-                ? { background: pkg.color, color: pkg.textColor || '#0a0a0a' }
+              style={pkg.color !== '#EAEAEA' && pkg.color !== '#2952FF'
+                ? { background: pkg.color, color: pkg.textColor || '#0B0B0B' }
                 : {}
               }
             >
@@ -41,7 +41,7 @@ export default function Packages() {
                 ))}
               </ul>
               <a
-                href={`${WA_LINK}&text=${encodeURIComponent(`Olá! Tenho interesse no pacote ${pkg.name} da FLIP.`)}`}
+                href={`${WA_LINK}&text=${encodeURIComponent(`Olá! Tenho interesse no pacote ${pkg.name} da Bowl Digital.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn ${pkg.highlight ? 'btn--primary' : 'btn--outline'} ${styles.cta}`}

@@ -8,7 +8,7 @@ import { SITE } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: `Sobre | ${SITE.name}`,
-  description: 'Conheça a FLIP — agência de marketing digital e publicidade em Maringá, PR. Nossa história, equipe e valores.',
+  description: 'Conheça a Bowl Digital — agência full service em Curitiba, PR. Nossa história, equipe e valores.',
   alternates: { canonical: `${SITE.url}/sobre` },
 };
 

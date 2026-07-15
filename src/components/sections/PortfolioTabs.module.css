@@ -35,7 +35,7 @@
 
 .tab.active {
   background: var(--black);
-  color: var(--yellow);
+  color: var(--bowl-blue);
 }
 
 /* Portfolio Grid */
@@ -56,7 +56,7 @@
 }
 
 .portfolioCard:hover {
-  border-color: var(--yellow);
+  border-color: var(--bowl-blue);
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
@@ -93,7 +93,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: var(--yellow);
+  color: var(--bowl-blue);
   font-family: var(--font-cond);
   font-weight: 700;
   font-size: 14px;
@@ -144,7 +144,7 @@
 }
 
 .caseCard:hover {
-  border-color: var(--yellow);
+  border-color: var(--bowl-blue);
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
@@ -180,7 +180,7 @@
   font-weight: 700;
   font-size: 15px;
   color: var(--black);
-  background: var(--yellow);
+  background: var(--bowl-blue);
   padding: 8px 14px;
   border-radius: var(--radius);
   margin-bottom: 16px;

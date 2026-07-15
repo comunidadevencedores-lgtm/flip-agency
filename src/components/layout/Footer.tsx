@@ -9,9 +9,9 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <div className={styles.logoBox}>FLIP</div>
-            <p>Marketing &amp; Publicidade</p>
-            <p className={styles.tagline}>A manobra certa para o<br />seu negócio decolar.</p>
+            <div className={styles.logoBox}>BOWL</div>
+            <p>Digital · Agência Full Service</p>
+            <p className={styles.tagline}>Sistemas que geram<br />crescimento todos os dias.</p>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--wa">
               Chamar no WhatsApp
             </a>
@@ -20,7 +20,7 @@ export default function Footer() {
           <nav className={styles.col}>
             <h4>Serviços</h4>
             <ul>
-              {['Tráfego Pago','Redes Sociais','Criação de Sites','Identidade Visual','Produção de Conteúdo','SEO','Automação & CRM'].map(s => (
+              {['Sites & Sistemas','Tráfego Pago','Redes Sociais','Automação & CRM','SEO','Consultoria Digital'].map(s => (
                 <li key={s}><Link href="/#servicos">{s}</Link></li>
               ))}
             </ul>
@@ -70,7 +70,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>© {year} {SITE.fullName}. Todos os direitos reservados.</p>
-          <p>Feito com 🛹 em Curitiba, PR</p>
+          <p>Feito com 🎳 em Curitiba, PR</p>
         </div>
       </div>
     </footer>

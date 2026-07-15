@@ -2,14 +2,14 @@
    ROOT & TOKENS
 ========================= */
 :root {
-  --yellow: #FFED00;
-  --yellow-dim: #FFF5A0;
-  --black: #0a0a0a;
-  --white: #FAFAFA;
-  --gray-100: #f0f0f0;
-  --gray-200: #e0e0e0;
+  --bowl-blue: #2952FF;
+  --bowl-blue-dim: #A9B8FF;
+  --black: #0B0B0B;
+  --white: #FFFFFF;
+  --gray-100: #EAEAEA;
+  --gray-200: #D8D8D8;
   --gray-500: #888;
-  --gray-800: #1a1a1a;
+  --gray-800: #1A1A1A;
   --green-wa: #25D366;
 
   --radius: 4px;
@@ -48,7 +48,7 @@ body {
    BASE ELEMENTS
 ========================= */
 ::selection {
-  background: var(--yellow);
+  background: var(--bowl-blue);
   color: var(--black);
 }
 
@@ -73,9 +73,10 @@ ul {
 /* HEADLINES */
 .display,
 h1, h2, h3 {
-  font-family: var(--font-heading);
-  letter-spacing: -0.5px;
-  line-height: 0.95;
+  font-family: var(--font-body);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
 /* BODY */
@@ -126,8 +127,8 @@ p {
   color: var(--white);
 }
 
-.section--yellow {
-  background: var(--yellow);
+.section--bowl-blue {
+  background: var(--bowl-blue);
   color: var(--black);
 }
 
@@ -158,11 +159,11 @@ p {
 
 .btn--primary {
   background: var(--black);
-  color: var(--yellow);
+  color: var(--bowl-blue);
 }
 
 .btn--primary:hover {
-  background: var(--yellow);
+  background: var(--bowl-blue);
   color: var(--black);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
@@ -176,7 +177,7 @@ p {
 
 .btn--outline:hover {
   background: var(--black);
-  color: var(--yellow);
+  color: var(--bowl-blue);
 }
 
 .btn--wa {
@@ -230,7 +231,7 @@ p {
 }
 
 .card:hover {
-  border-color: var(--yellow);
+  border-color: var(--bowl-blue);
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
@@ -251,7 +252,7 @@ p {
 ========================= */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-thumb { background: var(--black); }
-::-webkit-scrollbar-thumb:hover { background: var(--yellow); }
+::-webkit-scrollbar-thumb:hover { background: var(--bowl-blue); }
 
 /* =========================
    ANIMATIONS

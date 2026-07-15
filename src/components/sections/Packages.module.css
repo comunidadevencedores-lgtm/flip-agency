@@ -25,8 +25,8 @@
 }
 
 .featured {
-  border-color: var(--yellow);
-  background: var(--yellow) !important;
+  border-color: var(--bowl-blue);
+  background: var(--bowl-blue) !important;
   transform: scale(1.03);
 }
 
@@ -40,7 +40,7 @@
   left: 50%;
   transform: translateX(-50%);
   background: var(--black);
-  color: var(--yellow);
+  color: var(--bowl-blue);
   font-family: var(--font-cond);
   font-weight: 700;
   font-size: 11px;
@@ -84,7 +84,7 @@
 
 /* dark card (Flip Full) */
 .card[style*="rgb(10, 10, 10)"] .cardTop p,
-.card[style*="#0a0a0a"] .cardTop p { color: rgba(255,255,255,0.5); }
+.card[style*="#0B0B0B"] .cardTop p { color: rgba(255,255,255,0.5); }
 
 .includes {
   display: flex;
@@ -122,7 +122,7 @@
   transition: color 0.2s;
 }
 
-.footnote a:hover { color: var(--yellow); }
+.footnote a:hover { color: var(--bowl-blue); }
 
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }

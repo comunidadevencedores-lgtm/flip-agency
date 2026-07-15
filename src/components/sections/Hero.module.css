@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: var(--yellow);
+  background: var(--bowl-blue);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -168,7 +168,7 @@
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: var(--bowl-blue);
   padding: 0 6px;
 }
 

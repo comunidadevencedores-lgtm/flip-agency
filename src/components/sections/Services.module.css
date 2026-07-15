@@ -25,7 +25,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--yellow);
+  background: var(--bowl-blue);
   transform: scaleX(0);
   transition: transform var(--transition);
   transform-origin: left;
@@ -68,7 +68,7 @@
   transition: color var(--transition);
 }
 
-.card:hover .short { color: var(--yellow); }
+.card:hover .short { color: var(--bowl-blue); }
 
 .cardContent p {
   font-size: 14px;
@@ -97,7 +97,7 @@
 
 .card:hover .features li { color: rgba(255,255,255,0.7); }
 
-.features svg { color: var(--yellow); flex-shrink: 0; }
+.features svg { color: var(--bowl-blue); flex-shrink: 0; }
 
 @media (max-width: 1200px) {
   .grid { grid-template-columns: repeat(3, 1fr); }

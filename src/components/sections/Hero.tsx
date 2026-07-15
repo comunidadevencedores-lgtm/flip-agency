@@ -11,17 +11,17 @@ export default function Hero() {
         <div className={styles.content}>
 
           <div className={`tag ${styles.tag}`}>
-            Para empresas que já investem em marketing e não escalam
+            Agência full service · Dev + Marketing
           </div>
 
           <h1 className={`display ${styles.heading}`}>
-            PARE DE INVESTIR EM MARKETING SEM{' '}
-            <span className={styles.highlight}>RESULTADO</span>
+            SISTEMAS QUE GERAM{' '}
+            <span className={styles.highlight}>CRESCIMENTO</span> TODOS OS DIAS
           </h1>
 
           <p className={styles.sub}>
-            Ajudamos empresas a transformar tráfego em clientes todos os dias
-            com estratégia, automação e campanhas que realmente convertem.
+            Sites, sistemas, CRM, automações e aquisição de clientes — tudo sob o mesmo teto,
+            construído do zero pra fazer seu negócio crescer de verdade.
           </p>
 
           <div className={styles.actions}>
@@ -31,27 +31,27 @@ export default function Hero() {
               rel="noopener noreferrer nofollow"
               className="btn btn--primary btn--lg"
             >
-              Quero mais clientes
+              Quero crescer com a Bowl
             </a>
             <Link href="/portfolio" className="btn btn--outline btn--lg">
-              Ver resultados reais
+              Ver portfólio
             </Link>
           </div>
 
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <strong>+50</strong>
-              <span>Empresas atendidas</span>
+              <strong>Full Service</strong>
+              <span>Dev + Marketing sob o mesmo teto</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <strong>R$2M+</strong>
-              <span>Gerados em anúncios</span>
+              <strong>Next.js</strong>
+              <span>Sistemas sob medida, não templates</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <strong>+30%</strong>
-              <span>Média de crescimento</span>
+              <strong>Curitiba</strong>
+              <span>Time local, atendimento direto</span>
             </div>
           </div>
 
@@ -64,18 +64,18 @@ export default function Hero() {
         <div className={styles.visual} aria-hidden>
           <div className={styles.logoHero}>
             <Image
- src="/logoflip.jpeg"
-  alt="FLIP Marketing & Publicidade"
+ src="/logo-bowl-digital.png"
+  alt="Bowl Digital"
   width={640}
-  height={3200}
+  height={340}
   className={styles.logoImg}
-  style={{ width: 'auto', height: 'auto', maxWidth: '640px', maxHeight: '3200px' }}
+  style={{ width: 'auto', height: 'auto', maxWidth: '480px' }}
   priority
 />
           </div>
           <div className={styles.marqueeWrap}>
             <div className={styles.marquee}>
-              {Array(8).fill('FLIP — MARKETING & PUBLICIDADE — ').map((t, i) => (
+              {Array(8).fill('BOWL DIGITAL — SISTEMAS QUE GERAM CRESCIMENTO — ').map((t, i) => (
                 <span key={i}>{t}</span>
               ))}
             </div>

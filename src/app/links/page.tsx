@@ -9,13 +9,13 @@ const WA = SITE.whatsapp; // ex: "5541998736530"
 
 const LINKS = [
   {
-    id: 'barber',
-    emoji: '💈',
-    title: 'Sistema para Barbearias',
-    badge: '14 DIAS GRÁTIS',
-    sub: 'Automação de agenda, lembretes via WhatsApp e caixa.',
+    id: 'sistema',
+    emoji: '⚙️',
+    title: 'Sites & Sistemas Sob Medida',
+    badge: 'ORÇAMENTO GRÁTIS',
+    sub: 'Next.js, Supabase, CRM e automação de WhatsApp.',
     href: `https://wa.me/${WA}?text=${encodeURIComponent(
-      'Olá! Vi o sistema no Instagram e quero liberar meu teste de 14 dias para minha barbearia.'
+      'Olá! Vi o Instagram da Bowl Digital e quero um orçamento para meu negócio.'
     )}`,
     featured: true,
   },
@@ -25,7 +25,7 @@ const LINKS = [
     title: 'Tráfego Pago & Full Service',
     sub: 'Atração de clientes e escala de faturamento.',
     href: `https://wa.me/${WA}?text=${encodeURIComponent(
-      'Quero entender como funcionam os serviços de tráfego e marketing da FLIP.'
+      'Quero entender como funcionam os serviços de tráfego e marketing da Bowl Digital.'
     )}`,
     featured: false,
   },
@@ -76,18 +76,18 @@ function Logo() {
       {/* Tenta carregar logo real; fallback tipográfico se não existir */}
       <div
         style={{
-          fontFamily: "'Bebas Neue', 'Arial Black', sans-serif",
+          fontFamily: "'Inter', 'Arial Black', sans-serif",
           fontSize: '72px',
           lineHeight: '1',
           letterSpacing: '0.08em',
-          color: '#0a0a0a',
-          background: '#0a0a0a',
-          WebkitTextFillColor: '#FFED00',
+          color: '#0B0B0B',
+          background: '#0B0B0B',
+          WebkitTextFillColor: '#2952FF',
           padding: '6px 24px 2px',
           userSelect: 'none',
         }}
       >
-        FLIP
+        Bowl Digital
       </div>
     </div>
   );
@@ -102,11 +102,11 @@ function LinkButton({ item, index }: { item: LinkItem; index: number }) {
     gap: '16px',
     width: '100%',
     padding: item.featured ? '20px 24px' : '16px 24px',
-    background: hovered ? '#FFED00' : '#0a0a0a',
-    color: hovered ? '#0a0a0a' : '#FAFAFA',
+    background: hovered ? '#2952FF' : '#0B0B0B',
+    color: hovered ? '#0B0B0B' : '#FFFFFF',
     border: item.featured
-      ? `2px solid ${hovered ? '#0a0a0a' : '#FFED00'}`
-      : '2px solid #0a0a0a',
+      ? `2px solid ${hovered ? '#0B0B0B' : '#2952FF'}`
+      : '2px solid #0B0B0B',
     borderRadius: '4px',
     textDecoration: 'none',
     cursor: 'pointer',
@@ -136,7 +136,7 @@ function LinkButton({ item, index }: { item: LinkItem; index: number }) {
   };
 
   const titleSt: React.CSSProperties = {
-    fontFamily: "'Bebas Neue', 'Arial Black', sans-serif",
+    fontFamily: "'Inter', 'Arial Black', sans-serif",
     fontSize: item.featured ? '22px' : '18px',
     letterSpacing: '0.06em',
     lineHeight: '1',
@@ -159,8 +159,8 @@ function LinkButton({ item, index }: { item: LinkItem; index: number }) {
     letterSpacing: '0.12em',
     textTransform: 'uppercase',
     padding: '3px 10px',
-    background: hovered ? '#0a0a0a' : '#FFED00',
-    color: hovered ? '#FFED00' : '#0a0a0a',
+    background: hovered ? '#0B0B0B' : '#2952FF',
+    color: hovered ? '#2952FF' : '#0B0B0B',
     borderRadius: '2px',
     flexShrink: 0,
     transition: 'all 0.22s',
@@ -202,7 +202,7 @@ export default function LinksPage() {
 
   const pageSt: React.CSSProperties = {
     minHeight: '100vh',
-    background: '#FFED00',
+    background: '#2952FF',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -233,10 +233,10 @@ export default function LinksPage() {
   };
 
   const titleSt: React.CSSProperties = {
-    fontFamily: "'Bebas Neue', 'Arial Black', sans-serif",
+    fontFamily: "'Inter', 'Arial Black', sans-serif",
     fontSize: '22px',
     letterSpacing: '0.12em',
-    color: '#0a0a0a',
+    color: '#0B0B0B',
     lineHeight: '1',
     marginTop: '16px',
     textAlign: 'center',
@@ -255,7 +255,7 @@ export default function LinksPage() {
   const dividerSt: React.CSSProperties = {
     width: '40px',
     height: '3px',
-    background: '#0a0a0a',
+    background: '#0B0B0B',
     margin: '4px auto 0',
   };
 
@@ -281,7 +281,7 @@ export default function LinksPage() {
     <>
       {/* Google Fonts inline para garantir carregamento */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Barlow:wght@400;600;700&display=swap');
 
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(24px); }
@@ -306,14 +306,14 @@ export default function LinksPage() {
           <header style={headerSt}>
             <Logo />
             <div style={dividerSt} />
-            <h1 style={titleSt}>FLIP | Soluções Digitais</h1>
+            <h1 style={titleSt}>Bowl Digital | Soluções Digitais</h1>
             <p style={subtitleSt}>
               Escala, Automação e Processos para Negócios Locais.
             </p>
           </header>
 
           {/* ── LINKS ── */}
-          <nav style={listSt} aria-label="Links da FLIP">
+          <nav style={listSt} aria-label="Links da Bowl Digital">
             {LINKS.map((item, i) => (
               <LinkButton key={item.id} item={item} index={i} />
             ))}
@@ -321,7 +321,7 @@ export default function LinksPage() {
 
           {/* ── FOOTER ── */}
           <footer style={footerSt}>
-            © 2026 FLIP. Todos os direitos reservados.
+            © 2026 Bowl Digital. Todos os direitos reservados.
           </footer>
         </div>
       </main>

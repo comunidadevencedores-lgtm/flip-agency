@@ -15,7 +15,7 @@
   margin: 20px 0 28px;
 }
 
-.yellow { color: var(--yellow); }
+.yellow { color: var(--bowl-blue); }
 
 .desc {
   font-size: 16px;
@@ -85,7 +85,7 @@
 .logoText {
   font-family: var(--font-display);
   font-size: 80px;
-  color: var(--yellow);
+  color: var(--bowl-blue);
   line-height: 0.9;
   letter-spacing: 0.06em;
 }

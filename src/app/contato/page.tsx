@@ -7,7 +7,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: `Contato | ${SITE.name}`,
-  description: 'Entre em contato com a FLIP Marketing & Publicidade. Curitiba, PR.',
+  description: 'Entre em contato com a Bowl Digital. Curitiba, PR.',
   alternates: { canonical: `${SITE.url}/contato` },
 };
 
@@ -52,7 +52,7 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: 'Instagram',
-    value: '@aagenciaflip',
+    value: '@bowldigital',
     href: SITE.instagram,
     cta: 'Seguir no Instagram',
   },
@@ -66,14 +66,14 @@ export default function ContatoPage() {
         {/* Hero */}
         <div className={styles.hero}>
           <div className="container">
-            <div className="tag" style={{ color: 'var(--yellow)', borderColor: 'var(--yellow)' }}>
+            <div className="tag" style={{ color: 'var(--bowl-blue)', borderColor: 'var(--bowl-blue)' }}>
               Fale com a gente
             </div>
             <h1 className={`display ${styles.heading}`}>
               BORA<br />CONVERSAR?
             </h1>
             <p className={styles.sub}>
-              Sem compromisso, sem enrolação. Conta o que precisa e a gente te mostra como a FLIP pode ajudar.
+              Sem compromisso, sem enrolação. Conta o que precisa e a gente te mostra como a Bowl pode ajudar.
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function ContatoPage() {
               <div className={styles.bigCtaText}>
                 <h2 className="display" style={{ fontSize: 'clamp(36px,5vw,64px)' }}>
                   A forma mais rápida?<br />
-                  <span style={{ color: 'var(--yellow)', WebkitTextStroke: '2px var(--black)' }}>WhatsApp.</span>
+                  <span style={{ color: 'var(--bowl-blue)', WebkitTextStroke: '2px var(--black)' }}>WhatsApp.</span>
                 </h2>
                 <p>Resposta garantida em até 2 horas nos dias úteis.</p>
               </div>

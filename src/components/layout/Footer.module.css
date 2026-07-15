@@ -18,7 +18,7 @@
   font-family: var(--font-display);
   font-size: 48px;
   letter-spacing: 0.06em;
-  color: var(--yellow);
+  color: var(--bowl-blue);
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -48,7 +48,7 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: var(--bowl-blue);
   margin-bottom: 20px;
 }
 
@@ -64,7 +64,7 @@
   transition: color 0.2s;
 }
 
-.col a:hover { color: var(--yellow); }
+.col a:hover { color: var(--bowl-blue); }
 
 .contactList {
   display: flex;
@@ -80,7 +80,7 @@
   font-size: 14px;
 }
 
-.contactList svg { color: var(--yellow); flex-shrink: 0; }
+.contactList svg { color: var(--bowl-blue); flex-shrink: 0; }
 
 .social {
   display: flex;
@@ -101,8 +101,8 @@
 }
 
 .social a:hover {
-  border-color: var(--yellow);
-  color: var(--yellow) !important;
+  border-color: var(--bowl-blue);
+  color: var(--bowl-blue) !important;
   background: rgba(255,237,0,0.06);
 }
 

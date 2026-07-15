@@ -31,14 +31,14 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
            <Image
- src={scrolled ? "/logo-branca.png" : "/logoflip.jpeg"}
+ src="/logo-bowl-digital.png"
   alt={SITE.fullName}
-  height={180}
+  height={40}
   width={0}
   sizes="100vw"
   className={styles.logoImg}
   priority
-  style={{ width: "auto", height: "180px" }}
+  style={{ width: "auto", height: "40px" }}
 />
           </Link>
 

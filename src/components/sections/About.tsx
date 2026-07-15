@@ -2,7 +2,7 @@ import { WA_LINK } from '@/lib/data';
 import styles from './About.module.css';
 
 const DIFERENCIAIS = [
-  { icon: '🎯', title: 'Método próprio', desc: 'Sistema testado e validado para gerar resultados consistentes e previsíveis.' },
+  { icon: '🧩', title: 'Dev + marketing', desc: 'Uma única equipe cuida do sistema e da aquisição de clientes — sem ruído entre agência e dev.' },
   { icon: '📈', title: 'Visão integrada', desc: 'Não vendemos serviços isolados — criamos estratégias que conectam todas as pontas.' },
   { icon: '🤝', title: 'Parceria real', desc: 'Você não é só mais um cliente. Construímos relações de longo prazo.' },
   { icon: '⚡', title: 'Execução ágil', desc: 'Respondemos rápido, entregamos mais rápido ainda. Sem burocracia.' },
@@ -14,26 +14,26 @@ export default function About() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.left}>
-            <div className="tag" style={{ color: 'var(--yellow)', borderColor: 'var(--yellow)' }}>
-              Sobre a FLIP
+            <div className="tag" style={{ color: 'var(--bowl-blue)', borderColor: 'var(--bowl-blue)' }}>
+              Sobre a Bowl Digital
             </div>
             <h2 className={`display ${styles.heading}`}>
               SOMOS A<br />
               <span className={styles.yellow}>AGÊNCIA</span><br />
-              QUE FAZ<br />
-              ACONTECER.
+              QUE CONSTRÓI<br />
+              O SISTEMA.
             </h2>
             <p className={styles.desc}>
-              A FLIP nasceu da vontade de fazer marketing digital de verdade — sem enrolação,
-              sem promessa vazia, só resultado. Como um flip no skate, a gente pega o seu negócio,
-              gira no ar e entrega do jeito certo.
+              A Bowl Digital nasceu pra resolver um problema comum: agência que só cuida do
+              marketing e desenvolvedor que só cuida do código — e no meio do caminho, o negócio
+              fica sem dono. A gente cuida das duas pontas, sob o mesmo teto.
             </p>
             <p className={styles.desc}>
-              Somos uma equipe jovem, criativa e obcecada por performance. Já gerenciamos mais de
-              R$2 milhões em tráfego pago e ajudamos dezenas de empresas a construírem sua
-              presença digital do zero.
+              Construímos sites e sistemas sob medida em Next.js e Supabase, e ao mesmo tempo
+              cuidamos do tráfego pago, das redes sociais e da automação que transforma esse
+              sistema em clientes de verdade.
             </p>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--yellow">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
               Conhecer a equipe
             </a>
           </div>
@@ -48,8 +48,8 @@ export default function About() {
               ))}
             </div>
             <div className={styles.logoBlock} aria-hidden>
-              <span className={styles.logoText}>FLIP</span>
-              <span className={styles.logoSince}>est. 2024 — Curitiba, PR</span>
+              <span className={styles.logoText}>BOWL</span>
+              <span className={styles.logoSince}>Curitiba, PR</span>
             </div>
           </div>
         </div>

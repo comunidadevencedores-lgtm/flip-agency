@@ -3,7 +3,7 @@
 .hero {
   background: var(--black);
   padding: 80px 0 64px;
-  border-bottom: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--bowl-blue);
 }
 
 .heading {
@@ -41,7 +41,7 @@
 }
 
 .card:hover {
-  border-color: var(--yellow);
+  border-color: var(--bowl-blue);
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
   background: var(--black);
@@ -51,7 +51,7 @@
 .cardIcon {
   width: 52px;
   height: 52px;
-  background: var(--yellow);
+  background: var(--bowl-blue);
   color: var(--black);
   border-radius: var(--radius);
   display: flex;
@@ -62,7 +62,7 @@
 }
 
 .card:hover .cardIcon {
-  background: var(--yellow);
+  background: var(--bowl-blue);
   color: var(--black);
 }
 
@@ -97,10 +97,10 @@
   transition: color var(--transition);
 }
 
-.card:hover .cardCta { color: var(--yellow); }
+.card:hover .cardCta { color: var(--bowl-blue); }
 
 .bigCta {
-  background: var(--yellow);
+  background: var(--bowl-blue);
   border-radius: var(--radius-lg);
   padding: 64px;
   display: flex;

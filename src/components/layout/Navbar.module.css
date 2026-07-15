@@ -4,14 +4,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--yellow);
+  background: var(--bowl-blue);
   transition: all 0.3s ease;
   border-bottom: 2px solid transparent;
 }
 
 .header.scrolled {
   background: var(--black);
-  border-bottom-color: var(--yellow);
+  border-bottom-color: var(--bowl-blue);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -36,14 +36,14 @@
   font-size: 28px;
   letter-spacing: 0.08em;
   background: var(--black);
-  color: var(--yellow);
+  color: var(--bowl-blue);
   padding: 4px 14px;
   line-height: 1;
   transition: all 0.25s;
 }
 
 .header.scrolled .logoBox {
-  background: var(--yellow);
+  background: var(--bowl-blue);
   color: var(--black);
 }
 
@@ -99,7 +99,7 @@
 .link:hover::after { transform: scaleX(1); }
 
 .header.scrolled .link { color: var(--white); }
-.header.scrolled .link::after { background: var(--yellow); }
+.header.scrolled .link::after { background: var(--bowl-blue); }
 
 /* CTA */
 .cta {
@@ -109,9 +109,9 @@
 }
 
 .header.scrolled .cta {
-  background: var(--yellow) !important;
+  background: var(--bowl-blue) !important;
   color: var(--black) !important;
-  border-color: var(--yellow) !important;
+  border-color: var(--bowl-blue) !important;
 }
 
 .header.scrolled .cta:hover {
@@ -152,7 +152,7 @@
 /* Mobile Menu */
 .mobileMenu {
   background: var(--black);
-  border-top: 2px solid var(--yellow);
+  border-top: 2px solid var(--bowl-blue);
   padding: 24px;
 }
 
@@ -175,7 +175,7 @@
   transition: color 0.2s;
 }
 
-.mobileLink:hover { color: var(--yellow); }
+.mobileLink:hover { color: var(--bowl-blue); }
 
 @media (max-width: 1024px) {
   .links, .cta { display: none; }

@@ -3,7 +3,7 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
-  background: var(--yellow);
+  background: var(--bowl-blue);
 }
 
 .inner {

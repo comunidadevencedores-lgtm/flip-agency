@@ -11,6 +11,9 @@ const inter = Inter({
   weight: ['400', '500', '700', '800'],
 });
 
+
+
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,

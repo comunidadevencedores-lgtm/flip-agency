@@ -2,19 +2,20 @@ export const SITE = {
   name: 'Bowl Digital',
   fullName: 'Bowl Digital',
   tagline: 'Sistemas que geram crescimento todos os dias.',
+  seoDescription:
+    'Agência full service em Curitiba, PR. Sites de alta performance, Google Ads, Meta Ads, SEO, redes sociais e automação com IA para gerar mais clientes.',
   description:
-    'Agência full service em Curitiba, PR. Sites e sistemas sob medida (Next.js/Supabase), tráfego pago, redes sociais, automação e CRM para negócios que querem crescer de verdade.',
+    'A Bowl Digital é especializada em posicionamento digital e crescimento de empresas. Desenvolvemos sites de alta performance, landing pages, campanhas no Google Ads e Meta Ads, estratégias de SEO, gestão de redes sociais, automações e inteligência artificial para gerar mais clientes e fortalecer marcas. Nosso modelo Full Service integra tecnologia, marketing e vendas em um único ecossistema, criando uma presença digital sólida e orientada por resultados.',
   url: 'https://www.bowldigital.com.br',
-  // TODO Victor: confirmar número de WhatsApp comercial da Bowl Digital
-  whatsapp: '5541900000000',
+  whatsapp: '5541998736530',
   whatsappMsg: 'Olá! Vim pelo site da Bowl Digital e gostaria de conhecer os serviços.',
   // TODO Victor: confirmar e-mail comercial
   email: 'contato@bowldigital.com.br',
-  phone: '(41) 90000-0000',
+  phone: '(41) 99873-6530',
   address: 'Curitiba, PR',
-  instagram: 'https://www.instagram.com/bowldigital/',
+  instagram: 'https://www.instagram.com/bowl.digital/',
   linkedin: 'https://www.linkedin.com/company/bowldigital/',
-  facebook: 'https://www.facebook.com/bowldigital'
+  facebook: 'https://www.facebook.com/bowl.digital'
 };
 
 export const WA_LINK = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(SITE.whatsappMsg)}`;

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: `${SITE.fullName} — Curitiba, PR`,
     template: `%s | ${SITE.name}`,
   },
-  description: SITE.description,
+  description: SITE.seoDescription,
   keywords: [
     'agência de marketing digital curitiba',
     'tráfego pago curitiba',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.fullName,
     title: `${SITE.fullName} — ${SITE.tagline}`,
-    description: SITE.description,
+    description: SITE.seoDescription,
     images: [
       {
         url: '/og-image.jpg',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${SITE.fullName} — ${SITE.tagline}`,
-    description: SITE.description,
+    description: SITE.seoDescription,
   },
 
   robots: {

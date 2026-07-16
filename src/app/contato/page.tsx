@@ -52,7 +52,7 @@ const CONTACT_ITEMS = [
       </svg>
     ),
     label: 'Instagram',
-    value: '@bowldigital',
+    value: '@bowl.digital',
     href: SITE.instagram,
     cta: 'Seguir no Instagram',
   },

@@ -2,7 +2,7 @@
 
 Site institucional da Bowl Digital, agência full service (dev + marketing) em Curitiba, PR. Construído com **Next.js 14 (App Router)**, totalmente otimizado para SEO e performance.
 
-> Este projeto nasceu do template da FLIP Marketing & Publicidade (agência anterior do fundador) e foi rebrandado para a Bowl Digital: cores, tipografia, logo e todo o conteúdo institucional foram atualizados. A estrutura de código e o design system permanecem os mesmos.
+> Este projeto nasceu do template da FLIP Marketing & Publicidade (agência anterior do fundador) e foi rebrandado para a Bowl Digital: cores, tipografia, logo e todo o conteúdo institucional foram atualizados. A estrutura de código e o design system permanecem os mesmos......
  
 ## Stack
 

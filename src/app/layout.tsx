@@ -3,7 +3,6 @@ import { SITE } from '@/lib/data';
 import '../styles/globals.css';
 
 import { Inter } from 'next/font/google';
-import { MotionConfig } from 'framer-motion';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -116,9 +115,7 @@ export default function RootLayout({
       </head>
 
       <body className="font-body antialiased">
-        <MotionConfig reducedMotion="user">
-          {children}
-        </MotionConfig>
+        {children}
       </body>
     </html>
   );

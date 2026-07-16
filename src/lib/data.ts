@@ -9,6 +9,7 @@ export const SITE = {
   url: 'https://www.bowldigital.com.br',
   whatsapp: '5541998736530',
   whatsappMsg: 'Olá! Vim pelo site da Bowl Digital e gostaria de conhecer os serviços.',
+  // TODO Victor: confirmar e-mail comercial
   email: 'contato@bowldigital.com.br',
   phone: '(41) 99873-6530',
   address: 'Curitiba, PR',
@@ -118,7 +119,7 @@ export const PACKAGES = [
   },
 ];
 
-export const CASES = [
+export const CASES: Case[] = [
   {
     id: 'case-01',
     client: 'República do Barbeiro',
@@ -143,7 +144,7 @@ export const CASES = [
   },
 ];
 
-export const PORTFOLIO = [
+export const PORTFOLIO: PortfolioItem[] = [
   {
     id: 'port-01',
     title: 'República do Barbeiro',

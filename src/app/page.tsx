@@ -1,23 +1,30 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Hero from '@/components/sections/Hero';
+import Ticker from '@/components/ui/Ticker';
+import Services from '@/components/sections/Services';
 import About from '@/components/sections/About';
+import Packages from '@/components/sections/Packages';
 import CtaBanner from '@/components/sections/CtaBanner';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { SITE } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Sobre | ${SITE.name}`,
-  description: 'Conheça a Bowl Digital — agência full service em Curitiba, PR. Nossa história, equipe e valores.',
-  alternates: { canonical: `${SITE.url}/sobre` },
+  title: `${SITE.fullName} — ${SITE.tagline}`,
+  description: SITE.description,
 };
 
-export default function SobrePage() {
+export default function Home() {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: '72px' }}>
+      <main>
+        <Hero />
+        <Ticker />
+        <Services />
         <About />
+        <Packages />
         <CtaBanner />
       </main>
       <Footer />

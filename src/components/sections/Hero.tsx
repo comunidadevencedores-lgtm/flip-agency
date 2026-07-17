@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { WA_LINK } from '@/lib/data';
 import styles from './Hero.module.css';
@@ -12,101 +11,41 @@ export default function Hero() {
         <span className={styles.blob3} />
       </div>
 
-      <div className={`container ${styles.inner}`}>
-        <div className={styles.content}>
+      <div className={`container ${styles.inner}`} style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        paddingTop: '80px'
+      }}>
+        
+        <div className="flex flex-col items-center">
+          {/* Logo Gigante */}
+          <Image
+            src="/logo-bowl-digital.png"
+            alt="Bowl Digital"
+            width={680}
+            height={300}
+            priority
+            className="drop-shadow-2xl mb-6"
+            style={{ width: '100%', maxWidth: '680px', height: 'auto' }}
+          />
 
-          <div className={styles.tag}>
-            <span className={styles.tagDot} />
-            Agência full service · Dev + Marketing
-          </div>
-
-          <h1 className={styles.heading}>
-            Sistemas que geram{' '}
-            <span className={styles.highlight}>crescimento</span>
-            {' '}todos os dias
-          </h1>
-
-          <p className={styles.sub}>
-            Sites, sistemas, CRM, automações e aquisição de clientes — tudo sob o mesmo teto,
-            construído do zero pra fazer seu negócio crescer de verdade.
+          <p className="text-white/80 text-xl md:text-2xl tracking-[0.02em] mt-2">
+            DIGITAL · AGÊNCIA FULL SERVICE
           </p>
 
-          <div className={styles.actions}>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className={styles.btnPrimary}
-            >
-              Quero crescer com a Bowl
-            </a>
-            <Link href="/portfolio" className={styles.btnGhost}>
-              Ver portfólio
-            </Link>
-          </div>
-
-          <div className={styles.trust}>
-            <span>Full Service</span>
-            <i />
-            <span>Next.js &amp; Supabase</span>
-            <i />
-            <span>Curitiba, PR</span>
-          </div>
-        </div>
-
-        {/* VISUAL — card flutuante + chips */}
-        <div className={styles.visual} aria-hidden>
-          <div className={styles.card}>
-            <div className={styles.cardHead}>
-              <span className={styles.dot} data-c="1" />
-              <span className={styles.dot} data-c="2" />
-              <span className={styles.dot} data-c="3" />
-            </div>
-            <div className={styles.cardBody}>
-              <div className={styles.logoWrap}>
-                <Image
-                  src="/logo-bowl-digital.png"
-                  alt="Bowl Digital"
-                  width={280}
-                  height={150}
-                  className={styles.logoImg}
-                  priority
-                />
-              </div>
-              <div className={styles.barRow}>
-                <span className={styles.bar} style={{ width: '78%' }} />
-              </div>
-              <div className={styles.barRow}>
-                <span className={styles.bar} style={{ width: '52%' }} />
-              </div>
-              <div className={styles.barRow}>
-                <span className={styles.bar} style={{ width: '64%' }} />
-              </div>
-              <div className={styles.miniStats}>
-                <div>
-                  <strong>+30%</strong>
-                  <span>Conversão</span>
-                </div>
-                <div>
-                  <strong>24/7</strong>
-                  <span>Automação</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={`${styles.chip} ${styles.chip1}`}>
-            <span className={styles.chipDot} />
-            Next.js
-          </div>
-          <div className={`${styles.chip} ${styles.chip2}`}>
-            <span className={styles.chipDot} />
-            Google Ads
-          </div>
-          <div className={`${styles.chip} ${styles.chip3}`}>
-            <span className={styles.chipDot} />
-            WhatsApp + IA
-          </div>
+          {/* Botão WhatsApp grande */}
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-12 inline-flex items-center gap-3 bg-[#22C55E] hover:bg-[#16a34a] text-black font-bold py-5 px-16 rounded-2xl text-xl tracking-wider transition-all active:scale-95 shadow-xl"
+          >
+            CHAMAR NO WHATSAPP
+            <span className="text-2xl">↗</span>
+          </a>
         </div>
       </div>
     </section>

@@ -1,9 +1,4 @@
-import { MetadataRoute } from 'next';
-import { SITE } from '@/lib/data';
+User-agent: *
+Allow: /
 
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: { userAgent: '*', allow: '/' },
-    sitemap: `${SITE.url}/sitemap.xml`,
-  };
-}
+Sitemap: https://www.bowldigital.com.br/sitemap.xml

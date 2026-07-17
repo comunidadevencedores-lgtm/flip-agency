@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE, WA_LINK } from '@/lib/data';
 import styles from './Footer.module.css';
 
@@ -9,7 +10,15 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <div className={styles.logoBox}>BOWL</div>
+            <Image
+              src="/logo-bowl-digital.png"
+              alt={SITE.fullName}
+              width={220}
+              height={0}
+              sizes="220px"
+              className={styles.logoImg}
+              style={{ width: '140px', height: 'auto', marginBottom: '14px' }}
+            />
             <p>Digital · Agência Full Service</p>
             <p className={styles.tagline}>Sistemas que geram<br />crescimento todos os dias.</p>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--wa">

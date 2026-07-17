@@ -4,7 +4,6 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Ticker from '@/components/ui/Ticker';
 import Services from '@/components/sections/Services';
-import About from '@/components/sections/About';
 import Packages from '@/components/sections/Packages';
 import CtaBanner from '@/components/sections/CtaBanner';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
@@ -23,7 +22,6 @@ export default function Home() {
         <Hero />
         <Ticker />
         <Services />
-        <About />
         <Packages />
         <CtaBanner />
       </main>

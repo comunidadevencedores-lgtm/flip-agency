@@ -25,7 +25,7 @@
 }
 /* Logo em imagem - maior */
 .logoImg {
-  height: 56px !important;
+  height: 66px !important;
   width: auto;
   transition: height 0.3s ease;
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { WA_LINK } from '@/lib/data';
 import styles from './About.module.css';
 
@@ -47,9 +48,16 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <div className={styles.logoBlock} aria-hidden>
-              <span className={styles.logoText}>BOWL</span>
-              <span className={styles.logoSince}>Curitiba, PR</span>
+            {/* Bloco atualizado: Agora renderiza a imagem da logo centralizada de forma otimizada */}
+            <div className={styles.logoBlock}>
+              <Image 
+                src="/logo-bowl-digital.png" // Garanta que este seja o nome exato do arquivo na pasta /public
+                alt="Bowl Digital"
+                width={280} // Largura ideal para caber perfeitamente dentro da caixa preta
+                height={180} // Altura proporcional
+                style={{ objectFit: 'contain' }}
+                priority // Carrega a imagem imediatamente melhorando o SEO
+              />
             </div>
           </div>
         </div>

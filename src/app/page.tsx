@@ -3,8 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Ticker from '@/components/ui/Ticker';
-import Services from '@/components/sections/Services';
-import Packages from '@/components/sections/Packages';
+import Highlights from '@/components/sections/Highlights';
 import CtaBanner from '@/components/sections/CtaBanner';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { SITE } from '@/lib/data';
@@ -21,8 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         <Ticker />
-        <Services />
-        <Packages />
+        <Highlights />
         <CtaBanner />
       </main>
       <Footer />

@@ -7,7 +7,7 @@ export default function Packages() {
       <div className="container">
         <div className="section-header section-header--center">
           <div className="tag">Nossos pacotes</div>
-          <h2 className="display">PLANOS PARA<br />TODO TAMANHO</h2>
+          <h2 className="display">Planos para todo tamanho</h2>
           <p>Desde o negócio local que está começando até a empresa que quer escalar de verdade.</p>
         </div>
 

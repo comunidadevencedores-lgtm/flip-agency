@@ -6,9 +6,9 @@ export default function Services() {
     <section className={`section ${styles.services}`} id="servicos">
       <div className="container">
         <div className="section-header">
-          <div className="tag">O que fazemos</div>
-          <h2 className="display">SERVIÇOS<br />COMPLETOS</h2>
-          <p>Do conceito à conversão — tudo que precisa para crescer no digital em um só lugar.</p>
+          <div className="tag">Soluções completas</div>
+          <h2 className="display">SOLUÇÕES PARA<br />ESCALAR SEU NEGÓCIO</h2>
+          <p>Não somos só uma agência de marketing nem só um parceiro técnico. Somos o seu braço tecnológico e de marketing, em um só lugar.</p>
         </div>
 
         <div className={styles.grid}>

@@ -11,9 +11,6 @@ const inter = Inter({
   weight: ['400', '500', '700', '800'],
 });
 
-
-
-
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -94,7 +91,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': ['MarketingAgency', 'ProfessionalService'],
+              '@type': 'LocalBusiness', // Definição base mais segura para TypeScript / Google validators
+              additionalType: 'https://schema.org/MarketingAgency',
               name: SITE.fullName,
               url: SITE.url,
               logo: `${SITE.url}/logo-bowl-digital.png`,
@@ -111,7 +109,7 @@ export default function RootLayout({
                 contactType: 'customer service',
                 availableLanguage: 'Portuguese',
               },
-              sameAs: [SITE.instagram, SITE.linkedin, SITE.facebook],
+              sameAs: [SITE.instagram, SITE.linkedin, SITE.facebook].filter(Boolean), // Evita strings vazias/undefined caso falte alguma rede
             }),
           }}
         />

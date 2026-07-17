@@ -29,18 +29,18 @@ export default function Navbar() {
       <div className="container">
         <nav className={styles.nav}>
           {/* Logo */}
-          <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
-           <Image
- src="/logo-bowl-digital.png"
-  alt={SITE.fullName}
-  height={40}
-  width={0}
-  sizes="100vw"
-  className={styles.logoImg}
-  priority
-  style={{ width: "auto", height: "40px" }}
-/>
-          </Link>
+  <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
+  <Image
+    src="/logo-bowl-digital.png"
+    alt={SITE.fullName}
+    height={56}
+    width={0}
+    sizes="100vw"
+    className={styles.logoImg}
+    priority
+    style={{ width: "auto", height: "56px" }}   // ← aumentado
+  />
+</Link>
 
           {/* Desktop Links */}
           <ul className={styles.links}>

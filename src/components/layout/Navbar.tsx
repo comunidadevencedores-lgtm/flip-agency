@@ -41,7 +41,6 @@ export default function Navbar() {
     style={{ width: "auto", height: "56px" }}   // ← aumentado
   />
 </Link>
-
           {/* Desktop Links */}
           <ul className={styles.links}>
             {NAV_LINKS.map((l) => (

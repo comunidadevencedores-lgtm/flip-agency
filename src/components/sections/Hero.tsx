@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { WA_LINK } from '@/lib/data';
 import styles from './Hero.module.css';
 
@@ -12,33 +13,52 @@ export default function Hero() {
       </div>
 
       <div className={`container ${styles.inner}`}>
-        <div className="flex flex-col items-center justify-center min-h-[90vh] text-center pt-20">
-          
-          {/* Logo Gigante Central */}
-          <Image
-            src="/logo-bowl-digital.png"
-            alt="Bowl Digital"
-            width={720}
-            height={320}
-            priority
-            className="drop-shadow-2xl mb-8"
-            style={{ width: '100%', maxWidth: '720px', height: 'auto' }}
-          />
+        <div className={styles.content}>
 
-          <p className="text-white/80 text-2xl md:text-3xl tracking-wider mb-10">
-            DIGITAL · AGÊNCIA FULL SERVICE
+          <div className={styles.tag}>
+            <span className={styles.tagDot} />
+            Agência full service · Dev + Marketing
+          </div>
+
+          {/* Logo grande no lugar do título */}
+          <div className="my-8">
+            <Image
+              src="/logo-bowl-digital.png"
+              alt="Bowl Digital"
+              width={620}
+              height={260}
+              priority
+              className="mx-auto drop-shadow-2xl"
+              style={{ maxWidth: '620px', height: 'auto' }}
+            />
+          </div>
+
+          <p className={styles.sub}>
+            Sites, sistemas, CRM, automações e aquisição de clientes — tudo sob o mesmo teto,
+            construído do zero pra fazer seu negócio crescer de verdade.
           </p>
 
-          {/* Botão */}
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#22C55E] hover:bg-[#16a34a] text-black font-bold py-5 px-16 rounded-2xl text-xl tracking-wider transition-all active:scale-95 shadow-2xl"
-          >
-            CHAMAR NO WHATSAPP
-            <span>↗</span>
-          </a>
+          <div className={styles.actions}>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+              Quero crescer com a Bowl
+            </a>
+            <Link href="/portfolio" className={styles.btnGhost}>
+              Ver portfólio
+            </Link>
+          </div>
+
+          <div className={styles.trust}>
+            <span>Full Service</span>
+            <i />
+            <span>Next.js &amp; Supabase</span>
+            <i />
+            <span>Curitiba, PR</span>
+          </div>
+        </div>
+
+        {/* Mantém o card visual do lado direito */}
+        <div className={styles.visual} aria-hidden>
+          {/* ... mantém o card que já tinha ... */}
         </div>
       </div>
     </section>

@@ -1,23 +1,30 @@
 /* =========================
-   ROOT & TOKENS
+   ROOT & TOKENS (Paleta Oficial Manual)
 ========================= */
 :root {
-  --bowl-blue: #2952FF;
-  --bowl-blue-dim: #A9B8FF; 
-  --black: #0B0B0B;
+  /* Cores Principais do Manual */
+  --bowl-blue: #2952FF;       /* Azul oficial de destaque */
+  --bowl-blue-hover: #1E3BBF; /* Tom de azul sutilmente mais escuro para hover */
+  --bowl-blue-dim: #A9B8FF;   /* Azul claro de suporte */
+  --black: #0B0B0B;           /* Fundo escuro principal */
+  --dark-gray: #1A1A1A;       /* Substitui o antigo gray-800 - Fundo de cards/seções premium */
+  
+  /* Escala de Cinzas e Brancos */
   --white: #FFFFFF;
-  --gray-100: #EAEAEA;
+  --gray-100: #EAEAEA;        /* Fundo claro / Textos invertidos */
   --gray-200: #D8D8D8;
-  --gray-500: #888;
-  --gray-800: #1A1A1A;
+  --gray-500: #888888;
   --green-wa: #25D366;
 
+  /* Estrutura e Design System */
   --radius: 4px;
   --radius-lg: 12px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-  --shadow: 0 4px 24px rgba(0,0,0,0.08);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,0.16);
+  /* Efeitos de profundidade para o modo escuro */
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 48px rgba(41, 82, 255, 0.15); /* Glow sutil em azul */
+  --border-glow: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* =========================
@@ -38,8 +45,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--white);
-  color: var(--black);
+  background: var(--black); /* Corrigido para iniciar em Dark Mode como o manual pede */
+  color: var(--white);      /* Texto base passa a ser branco para contrastar */
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -49,7 +56,7 @@ body {
 ========================= */
 ::selection {
   background: var(--bowl-blue);
-  color: var(--black);
+  color: var(--white);
 }
 
 img {
@@ -67,16 +74,16 @@ ul {
 }
 
 /* =========================
-   TYPOGRAPHY (UPGRADE REAL)
+   TYPOGRAPHY (Ajustado ao Manual)
 ========================= */
 
-/* HEADLINES */
+/* HEADLINES (Inter Bold/ExtraBold com tracking negativo) */
 .display,
 h1, h2, h3 {
   font-family: var(--font-body);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  font-weight: 800; /* Força o Inter Bold/ExtraBold do manual */
+  letter-spacing: -0.02em; /* Efeito premium de agência tech */
+  line-height: 1.1;
 }
 
 /* BODY */
@@ -87,20 +94,22 @@ p, span, li, a, button {
 /* PARÁGRAFOS PREMIUM */
 p {
   font-size: 16px;
+  font-weight: 400; /* Inter Regular */
   line-height: 1.7;
-  color: #222;
+  color: var(--gray-200); /* Cinza claro para não cansar a leitura no escuro */
 }
 
-/* TAG (melhorada) */
+/* TAG (Melhorado com o Azul Oficial) */
 .tag {
   display: inline-block;
-  font-weight: 600;
+  font-weight: 600; /* Inter Medium/Bold */
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 6px 14px;
-  border: 1.5px solid currentColor;
-  border-radius: 2px;
+  border: 1.5px solid var(--bowl-blue);
+  color: var(--bowl-blue);
+  border-radius: var(--radius);
   margin-bottom: 16px;
 }
 
@@ -122,31 +131,41 @@ p {
   padding: 64px 0;
 }
 
+/* Seção Padrão Escura (Predominante no site) */
 .section--dark {
   background: var(--black);
   color: var(--white);
 }
 
+/* Seção de Destaque usando o Azul Oficial */
 .section--bowl-blue {
   background: var(--bowl-blue);
-  color: var(--black);
+  color: var(--white);
+}
+.section--bowl-blue p {
+  color: var(--white);
 }
 
+/* Seção Clara Opcional */
 .section--gray {
   background: var(--gray-100);
+  color: var(--black);
+}
+.section--gray p {
+  color: #222222;
 }
 
 /* =========================
-   BUTTONS (REFINADO)
+   BUTTONS (Refinado e com Transições Suaves)
 ========================= */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
-  font-weight: 600;
+  font-weight: 600; /* Inter Medium para botões */
   font-size: 14px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 
   padding: 16px 36px;
@@ -157,32 +176,39 @@ p {
   transition: all var(--transition);
 }
 
+/* Botão Principal: Agora brilha em azul oficial e muda no hover */
 .btn--primary {
-  background: var(--black);
-  color: var(--bowl-blue);
+  background: var(--bowl-blue);
+  color: var(--white);
 }
 
 .btn--primary:hover {
-  background: var(--bowl-blue);
-  color: var(--black);
+  background: var(--bowl-blue-hover);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 0 20px rgba(41, 82, 255, 0.4);
 }
 
+/* Botão Outline adaptado para sobressair no fundo escuro */
 .btn--outline {
   background: transparent;
-  color: var(--black);
-  border-color: var(--black);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn--outline:hover {
-  background: var(--black);
-  color: var(--bowl-blue);
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+  transform: translateY(-2px);
 }
 
 .btn--wa {
   background: var(--green-wa);
   color: var(--white);
+}
+.btn--wa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
 }
 
 .btn--lg {
@@ -198,7 +224,7 @@ p {
 }
 
 .section-header h2 {
-  font-size: clamp(42px, 6vw, 72px);
+  font-size: clamp(38px, 5.5vw, 68px);
 }
 
 .section-header p {
@@ -220,45 +246,46 @@ p {
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 
 /* =========================
-   CARD
+   CARD (Premium Dark UI)
 ========================= */
 .card {
-  background: var(--white);
-  border: 1.5px solid var(--gray-200);
+  background: var(--dark-gray); /* Fundo #1A1A1A do manual, perfeito para profundidade */
+  border: var(--border-glow); /* Borda fina quase imperceptível */
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all var(--transition);
 }
 
 .card:hover {
-  border-color: var(--bowl-blue);
+  border-color: var(--bowl-blue); /* Destaca com o azul oficial ao passar o mouse */
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
 
 /* =========================
-   NOISE
+   NOISE (Efeito de Textura Sutil)
 ========================= */
 .noise::after {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.04;
+  opacity: 0.02; /* Reduzido para ficar extremamente elegante */
   pointer-events: none;
 }
 
 /* =========================
    SCROLLBAR
 ========================= */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-thumb { background: var(--black); }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--dark-gray); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--bowl-blue); }
 
 /* =========================
    ANIMATIONS
 ========================= */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(32px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -271,7 +298,7 @@ p {
 ========================= */
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
-  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 24px; }
 }
 
 @media (max-width: 480px) {

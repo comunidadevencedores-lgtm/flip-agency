@@ -1,4 +1,12 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.bowldigital.com.br/sitemap.xml
+import { MetadataRoute } from 'next'
+ 
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+    },
+    sitemap: 'https://www.bowldigital.com.br/sitemap.xml',
+  }
+}
+ 

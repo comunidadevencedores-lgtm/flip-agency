@@ -30,7 +30,7 @@ export default function Footer() {
             <h4>Serviços</h4>
             <ul>
               {['Sites & Sistemas','Tráfego Pago','Redes Sociais','Automação & CRM','SEO','Consultoria Digital'].map(s => (
-                <li key={s}><Link href="/#servicos">{s}</Link></li>
+                <li key={s}><Link href="/servicos">{s}</Link></li>
               ))}
             </ul>
           </nav>
@@ -40,8 +40,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/sobre">Sobre nós</Link></li>
               <li><Link href="/portfolio">Portfólio</Link></li>
-              <li><Link href="/portfolio#cases">Cases</Link></li>
-              <li><Link href="/#pacotes">Pacotes</Link></li>
+              <li><Link href="/pacotes">Pacotes</Link></li>
               <li><Link href="/contato">Contato</Link></li>
             </ul>
           </nav>

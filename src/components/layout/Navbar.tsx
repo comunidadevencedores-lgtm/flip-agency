@@ -31,7 +31,7 @@ export default function Navbar() {
           {/* Logo */}
   <Link href="/" className={styles.logo} aria-label={SITE.fullName}>
   <Image
-    src="/logo-bowl-digital.png"
+    src="/logo-bowl-digitalfb.png"
     alt={SITE.fullName}
     height={56}
     width={0}

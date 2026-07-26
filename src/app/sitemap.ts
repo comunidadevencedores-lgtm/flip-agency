@@ -1,13 +1,42 @@
-import { MetadataRoute } from 'next';
-import { SITE } from '@/lib/data';
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = SITE.url;
-  const now = new Date();
   return [
-    { url: base, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${base}/portfolio`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/sobre`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/contato`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-  ];
+    {
+      url: 'https://www.bowldigital.com.br/',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: 'https://www.bowldigital.com.br/servicos',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://www.bowldigital.com.br/pacotes',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://www.bowldigital.com.br/portfolio',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://www.bowldigital.com.br/contato',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://www.bowldigital.com.br/sobre',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
 }

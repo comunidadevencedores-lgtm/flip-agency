@@ -23,33 +23,25 @@
   height: 72px;
   gap: 32px;
 }
+/* Logo em imagem - maior */
+.logoImg {
+  height: 66px !important;
+  width: auto;
+  transition: height 0.3s ease;
+}
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  flex-shrink: 0;
+  height: 72px;           /* mantém altura do header */
 }
 
-.logoBox {
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.01em;
-  color: var(--black);
-  line-height: 1;
+/* Responsivo */
+@media (max-width: 1024px) {
+  .logoImg {
+    height: 48px !important;
+  }
 }
-
-.logoSub {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--gray-500);
-  line-height: 1.3;
-  max-width: 100px;
-}
-
 /* Links */
 .links {
   display: flex;

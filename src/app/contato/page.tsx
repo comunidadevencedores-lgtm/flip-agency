@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
+import HelpTriage from '@/components/sections/HelpTriage';
 import { SITE, WA_LINK } from '@/lib/data';
 import styles from './page.module.css';
 
@@ -11,18 +12,10 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE.url}/contato` },
 };
 
+// WhatsApp saiu daqui: a triagem "Como podemos te ajudar?" já cobre isso
+// com uma mensagem específica por intenção — manter também um card
+// genérico de WhatsApp seria o mesmo canal duplicado sem motivo.
 const CONTACT_ITEMS = [
-  {
-    icon: (
-      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.125.554 4.118 1.523 5.845L.057 23.576a.75.75 0 00.92.92l5.733-1.466A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-      </svg>
-    ),
-    label: 'WhatsApp',
-    value: SITE.phone,
-    href: WA_LINK,
-    cta: 'Mandar mensagem',
-  },
   {
     icon: (
       <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -78,9 +71,19 @@ export default function ContatoPage() {
           </div>
         </div>
 
-        {/* Contact grid */}
-        <section className="section">
+        {/* Triagem — resolve a dúvida do visitante na hora, sem formulário */}
+        <section className="section section--sm">
           <div className="container">
+            <HelpTriage />
+          </div>
+        </section>
+
+        {/* Outros canais */}
+        <section className="section section--sm section--gray">
+          <div className="container">
+            <div className={styles.header}>
+              <h2 className={styles.otherChannelsTitle}>Prefere outro canal?</h2>
+            </div>
             <div className={styles.grid}>
               {CONTACT_ITEMS.map((item) => (
                 <a
@@ -102,14 +105,14 @@ export default function ContatoPage() {
 
             <div className={styles.bigCta}>
               <div className={styles.bigCtaText}>
-                <h2 className="display" style={{ fontSize: 'clamp(36px,5vw,64px)' }}>
-                  A forma mais rápida?<br />
-                  <span style={{ color: 'var(--bowl-blue)', WebkitTextStroke: '2px var(--black)' }}>WhatsApp.</span>
+                <h2 className="display" style={{ fontSize: 'clamp(32px,4.5vw,52px)' }}>
+                  Nenhuma opção acima combina?<br />
+                  <span style={{ color: 'var(--bowl-blue)', WebkitTextStroke: '2px var(--black)' }}>Chama a gente mesmo assim.</span>
                 </h2>
                 <p>Resposta garantida em até 2 horas nos dias úteis.</p>
               </div>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
-                Chamar no WhatsApp agora
+                Chamar no WhatsApp
               </a>
             </div>
           </div>

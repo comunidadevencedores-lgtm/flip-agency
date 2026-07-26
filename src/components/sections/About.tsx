@@ -1,11 +1,13 @@
+import Image from 'next/image';
 import { WA_LINK } from '@/lib/data';
+import { IconPuzzle, IconTrendingUp, IconHandshake, IconZap } from '@/components/ui/Icons';
 import styles from './About.module.css';
 
 const DIFERENCIAIS = [
-  { icon: '🧩', title: 'Dev + marketing', desc: 'Uma única equipe cuida do sistema e da aquisição de clientes — sem ruído entre agência e dev.' },
-  { icon: '📈', title: 'Visão integrada', desc: 'Não vendemos serviços isolados — criamos estratégias que conectam todas as pontas.' },
-  { icon: '🤝', title: 'Parceria real', desc: 'Você não é só mais um cliente. Construímos relações de longo prazo.' },
-  { icon: '⚡', title: 'Execução ágil', desc: 'Respondemos rápido, entregamos mais rápido ainda. Sem burocracia.' },
+  { icon: IconPuzzle, title: 'Dev + marketing', desc: 'Uma única equipe cuida do sistema e da aquisição de clientes — sem ruído entre agência e dev.' },
+  { icon: IconTrendingUp, title: 'Visão integrada', desc: 'Não vendemos serviços isolados — criamos estratégias que conectam todas as pontas.' },
+  { icon: IconHandshake, title: 'Parceria real', desc: 'Você não é só mais um cliente. Construímos relações de longo prazo.' },
+  { icon: IconZap, title: 'Execução ágil', desc: 'Respondemos rápido, entregamos mais rápido ainda. Sem burocracia.' },
 ];
 
 export default function About() {
@@ -18,8 +20,8 @@ export default function About() {
               Sobre a Bowl Digital
             </div>
             <h2 className={`display ${styles.heading}`}>
-              SOMOS A<br />
-              <span className={styles.yellow}>AGÊNCIA</span><br />
+              SOMOS O<br />
+              <span className={styles.yellow}>TIME</span><br />
               QUE CONSTRÓI<br />
               O SISTEMA.
             </h2>
@@ -41,15 +43,23 @@ export default function About() {
             <div className={styles.difsGrid}>
               {DIFERENCIAIS.map((d) => (
                 <div key={d.title} className={styles.difCard}>
-                  <span className={styles.difIcon}>{d.icon}</span>
+                  <span className={styles.difIcon}><d.icon size={22} /></span>
                   <h3>{d.title}</h3>
                   <p>{d.desc}</p>
                 </div>
               ))}
             </div>
-            <div className={styles.logoBlock} aria-hidden>
-              <span className={styles.logoText}>BOWL</span>
-              <span className={styles.logoSince}>Curitiba, PR</span>
+            <div className={styles.logoBlock}>
+              <Image
+                src="/logo-bowl-digital.png"
+                alt="Bowl Digital"
+                width={280}
+                height={180}
+                style={{ objectFit: 'contain' }}
+                // Sem `priority`: esta imagem está abaixo da dobra em /sobre,
+                // não é o LCP da página — priority aqui só competia por preload
+                // com o logo do Navbar e do Hero, atrasando o que de fato importa.
+              />
             </div>
           </div>
         </div>

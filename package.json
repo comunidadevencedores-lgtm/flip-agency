@@ -1,4 +1,4 @@
-{
+ {
   "name": "bowl-digital-site",
   "version": "1.0.0",
   "private": true,
@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "critters": "^0.0.23",
     "next": "^14.2.35",
     "react": "^18",
     "react-dom": "^18"

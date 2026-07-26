@@ -20,6 +20,55 @@ export const SITE = {
 
 export const WA_LINK = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(SITE.whatsappMsg)}`;
 
+/** Gera um link de WhatsApp com mensagem pré-preenchida específica —
+ * usado pela triagem "Como podemos te ajudar?" em /contato. */
+export function buildWaLink(message: string) {
+  return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+/**
+ * Opções de triagem da página de contato.
+ *
+ * Por quê: um formulário genérico (nome/e-mail/telefone/mensagem) empurra
+ * pro visitante o trabalho de explicar o que ele quer, e pra Bowl o trabalho
+ * de decifrar isso depois. Cada opção aqui já entrega, na hora, a mensagem
+ * certa pro WhatsApp certo — fricção zero, sem esperar retorno.
+ */
+export const HELP_OPTIONS = [
+  {
+    label: 'Quero vender mais',
+    message: 'Olá! Vim pelo site da Bowl Digital — quero vender mais e queria entender como vocês podem ajudar.',
+  },
+  {
+    label: 'Quero um site novo',
+    message: 'Olá! Vim pelo site da Bowl Digital e quero um site ou sistema novo. Podemos conversar?',
+  },
+  {
+    label: 'Quero Google Ads / Meta Ads',
+    message: 'Olá! Vim pelo site da Bowl Digital e tenho interesse em campanhas de tráfego pago (Google/Meta Ads).',
+  },
+  {
+    label: 'Quero automatizar meu atendimento',
+    message: 'Olá! Vim pelo site da Bowl Digital e quero automatizar meu atendimento (bot de WhatsApp/CRM).',
+  },
+  {
+    label: 'Quero um CRM',
+    message: 'Olá! Vim pelo site da Bowl Digital e tenho interesse em um CRM para organizar meus leads/clientes.',
+  },
+  {
+    label: 'Quero ser parceiro',
+    message: 'Olá! Sou agência/dev/consultor e vim pelo site da Bowl Digital — tenho interesse em parceria.',
+  },
+  {
+    label: 'Já sou cliente',
+    message: 'Olá! Já sou cliente da Bowl Digital e preciso falar sobre meu projeto.',
+  },
+  {
+    label: 'Suporte',
+    message: 'Olá! Preciso de suporte em um projeto que já tenho com a Bowl Digital.',
+  },
+];
+
 export const SERVICES = [
   {
     icon: '💻',

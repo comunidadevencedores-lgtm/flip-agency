@@ -1,0 +1,71 @@
+.triage {
+  padding: var(--space-8) 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-7);
+}
+
+.header h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.header p {
+  color: var(--gray-500);
+  font-size: 16px;
+}
+
+/* auto-fit + minmax: se adapta ao número de opções e à largura da tela
+   sem precisar de um breakpoint manual pra cada quebra de coluna. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+
+  padding: var(--space-5) var(--space-5);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--black);
+
+  transition: all var(--transition);
+}
+
+.option:hover,
+.option:focus-visible {
+  border-color: var(--bowl-blue);
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.optionIcon {
+  flex-shrink: 0;
+  color: var(--green-wa);
+  transition: color var(--transition);
+}
+
+.option:hover .optionIcon,
+.option:focus-visible .optionIcon {
+  color: var(--bowl-blue-dim);
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -78,7 +78,15 @@
   transition: color var(--transition);
 }
 
-.card:hover .cardLabel { color: rgba(255,255,255,0.4); }
+.card:hover .cardLabel { color: rgba(255,255,255,0.62); }
+
+.header { margin-bottom: var(--space-6); }
+
+.otherChannelsTitle {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
 
 .cardValue {
   font-family: var(--font-cond);

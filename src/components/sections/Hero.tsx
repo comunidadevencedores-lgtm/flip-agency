@@ -45,17 +45,34 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className={styles.trust}>
-            <span>Full Service</span>
-            <i />
-            <span>Next.js &amp; Supabase</span>
-            <i />
-            <span>Curitiba, PR</span>
+          <div className={styles.iconRow}>
+            <div className={styles.iconItem}>
+              <span className={styles.iconBadge}>⚡</span>
+              <span>Tecnologia</span>
+            </div>
+            <div className={styles.iconItem}>
+              <span className={styles.iconBadge}>🎯</span>
+              <span>Estratégia</span>
+            </div>
+            <div className={styles.iconItem}>
+              <span className={styles.iconBadge}>📈</span>
+              <span>Resultados</span>
+            </div>
           </div>
         </div>
 
-        {/* VISUAL — card flutuante + chips */}
+        {/* VISUAL — card flutuante + selo com glow */}
         <div className={styles.visual} aria-hidden>
+          <div className={styles.glowBadge}>
+            <Image
+              src="/icon-bowl.png"
+              alt=""
+              width={120}
+              height={120}
+              className={styles.glowBadgeImg}
+            />
+          </div>
+
           <div className={styles.card}>
             <div className={styles.cardHead}>
               <span className={styles.dot} data-c="1" />

@@ -2,22 +2,43 @@
    ROOT & TOKENS
 ========================= */
 :root {
+  /* Identidade de marca — inalterada */
   --bowl-blue: #2952FF;
-  --bowl-blue-dim: #A9B8FF; 
+  --bowl-blue-dim: #A9B8FF;
   --black: #0B0B0B;
   --white: #FFFFFF;
   --gray-100: #EAEAEA;
   --gray-200: #D8D8D8;
-  --gray-500: #888;
+  /* gray-500: era #888 (contraste 3,54:1 sobre branco, reprovava WCAG AA).
+     #6B6B6B mantém a mesma "sensação" de cinza neutro, mas passa em 5,3:1. */
+  --gray-500: #6B6B6B;
   --gray-800: #1A1A1A;
   --green-wa: #25D366;
 
   --radius: 4px;
   --radius-lg: 12px;
+  --radius-xl: 20px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   --shadow: 0 4px 24px rgba(0,0,0,0.08);
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.16);
+
+  /* Escala de espaçamento — múltiplos de 4px, para substituir valores soltos
+     (14px, 20px etc.) por decisões consistentes em todo o projeto. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Breakpoints de referência (documentação — media queries continuam
+     usando valores literais, CSS nativo não lê custom properties aqui,
+     mas todo componente novo/refatorado deve usar exatamente estes 4 valores) */
+  /* mobile: até 480px · tablet: até 768px · desktop-sm: até 1024px · desktop: acima */
 }
 
 /* =========================
@@ -96,12 +117,13 @@ p {
   display: inline-block;
   font-weight: 600;
   font-size: 11px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 6px 14px;
-  border: 1.5px solid currentColor;
-  border-radius: 2px;
-  margin-bottom: 16px;
+  padding: 7px 16px;
+  background: var(--bowl-blue-dim);
+  color: var(--bowl-blue);
+  border-radius: 999px;
+  margin-bottom: 10px;
 }
 
 /* =========================
@@ -199,13 +221,14 @@ p {
 
 .section-header h2 {
   font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
 }
 
 .section-header p {
   font-size: 18px;
   color: var(--gray-500);
   max-width: 600px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .section-header--center {

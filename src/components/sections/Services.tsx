@@ -25,6 +25,7 @@ export default function Services() {
             return (
             <div key={s.title} className={styles.card}>
               <div className={styles.icon}><ServiceIcon size={24} /></div>
+
               <h3>{s.title}</h3>
               <p>{s.description}</p>
               <div className={styles.divider} />

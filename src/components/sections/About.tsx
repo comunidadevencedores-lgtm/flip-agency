@@ -59,6 +59,7 @@ export default function About() {
                 // Sem `priority`: esta imagem está abaixo da dobra em /sobre,
                 // não é o LCP da página — priority aqui só competia por preload
                 // com o logo do Navbar e do Hero, atrasando o que de fato importa.
+
               />
             </div>
           </div>

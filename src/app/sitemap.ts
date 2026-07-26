@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+
       url: 'https://www.bowldigital.com.br/portfolio',
       lastModified: new Date(),
       changeFrequency: 'weekly',

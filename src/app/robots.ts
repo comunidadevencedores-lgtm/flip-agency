@@ -9,4 +9,5 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: 'https://www.bowldigital.com.br/sitemap.xml',
   }
 }
+
  

@@ -1,20 +1,24 @@
 import Link from 'next/link';
 import { IconWallet, IconLayers, IconUsers } from '@/components/ui/Icons';
+
 import styles from './Highlights.module.css';
 
 const ITEMS = [
   {
     icon: IconWallet,
+
     title: 'Cabe no seu bolso',
     desc: 'Planos mensais, sem contrato de fidelidade e sem letra miúda. Você escolhe o tamanho que faz sentido pro seu momento agora.',
   },
   {
     icon: IconLayers,
+
     title: 'Do simples ao robusto',
     desc: 'Desde uma landing page pra validar uma ideia até sistemas prontos pra escalar em nível multinacional. A gente cresce junto com você.',
   },
   {
     icon: IconUsers,
+
     title: 'Uma equipe só',
     desc: 'Sem ficar dividindo atenção entre agência de marketing e desenvolvedor. É um único time cuidando do sistema e da aquisição de clientes.',
   },
@@ -37,6 +41,7 @@ export default function Highlights() {
           {ITEMS.map((item) => (
             <div key={item.title} className={styles.card}>
               <div className={styles.icon}><item.icon size={26} /></div>
+
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
             </div>

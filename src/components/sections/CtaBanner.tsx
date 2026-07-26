@@ -21,6 +21,7 @@ export default function CtaBanner() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
               Falar com a Bowl
               <WhatsAppIcon size={20} />
+
             </a>
             <span className={styles.note}>Resposta em até 2 horas ⚡</span>
           </div>

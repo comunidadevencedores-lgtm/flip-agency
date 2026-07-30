@@ -1,5 +1,9 @@
+'use client'
+
 import { PACKAGES, WA_LINK } from '@/lib/data';
 import styles from './Packages.module.css';
+import { track } from '@/lib/analytics/track';
+import { getAttribution } from '@/lib/analytics/attribution';
 
 export default function Packages() {
   return (
@@ -45,6 +49,14 @@ export default function Packages() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn ${pkg.highlight ? 'btn--primary' : 'btn--outline'} ${styles.cta}`}
+                onClick={() =>
+                  track('whatsapp_click', {
+                    click_location: 'packages',
+                    package_name: pkg.name,
+                    value: 1,
+                    ...getAttribution(),
+                  })
+                }
               >
                 Quero esse pacote
               </a>
@@ -54,7 +66,18 @@ export default function Packages() {
 
         <p className={styles.footnote}>
           Todos os pacotes são mensais e sem fidelidade. Precisa de algo personalizado?{' '}
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={WA_LINK} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() =>
+              track('whatsapp_click', {
+                click_location: 'packages_footnote',
+                value: 1,
+                ...getAttribution(),
+              })
+            }
+          >
             Fale com a gente.
           </a>
         </p>

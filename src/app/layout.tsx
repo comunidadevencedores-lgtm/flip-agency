@@ -3,6 +3,8 @@ import { SITE } from '@/lib/data';
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import Analytics from '@/components/Analytics';
+import { Suspense } from 'react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -135,6 +137,9 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         {children}
       </body>
     </html>

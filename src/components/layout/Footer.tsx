@@ -1,8 +1,12 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE, WA_LINK } from '@/lib/data';
 import { WhatsAppIcon } from '@/components/ui/Icons';
 import styles from './Footer.module.css';
+import { track } from '@/lib/analytics/track';
+import { getAttribution } from '@/lib/analytics/attribution';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -22,7 +26,19 @@ export default function Footer() {
             />
             <p>Digital · Agência Full Service</p>
             <p className={styles.tagline}>Sistemas que geram<br />crescimento todos os dias.</p>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--wa">
+            <a 
+              href={WA_LINK} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn--wa"
+              onClick={() =>
+                track('whatsapp_click', {
+                  click_location: 'footer_cta',
+                  value: 1,
+                  ...getAttribution(),
+                })
+              }
+            >
               Chamar no WhatsApp
             </a>
           </div>
@@ -51,7 +67,18 @@ export default function Footer() {
             <ul className={styles.contactList}>
               <li>
                 <WhatsAppIcon size={16} />
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">{SITE.phone}</a>
+                <a 
+                  href={WA_LINK} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    track('whatsapp_click', {
+                      click_location: 'footer_phone',
+                      value: 1,
+                      ...getAttribution(),
+                    })
+                  }
+                >{SITE.phone}</a>
               </li>
               <li>
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>

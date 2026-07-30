@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE, WA_LINK } from '@/lib/data';
+import { track } from '@/lib/analytics/track';
+import { getAttribution } from '@/lib/analytics/attribution';
 import { WhatsAppIcon } from '@/components/ui/Icons';
 import styles from './Navbar.module.css';
 
@@ -57,7 +59,19 @@ export default function Navbar() {
           </ul>
 
           {/* CTA */}
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className={`btn btn--primary ${styles.cta}`}>
+          <a 
+            href={WA_LINK} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`btn btn--primary ${styles.cta}`}
+            onClick={() =>
+              track('whatsapp_click', {
+                click_location: 'header',
+                value: 1,
+                ...getAttribution(),
+              })
+            }
+          >
             <span>Fale Conosco</span>
             <WhatsAppIcon size={16} />
           </a>
@@ -85,7 +99,20 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn--wa" style={{ width: '100%', justifyContent: 'center' }}>
+              <a 
+                href={WA_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn--wa" 
+                style={{ width: '100%', justifyContent: 'center' }}
+                onClick={() =>
+                  track('whatsapp_click', {
+                    click_location: 'mobile_menu',
+                    value: 1,
+                    ...getAttribution(),
+                  })
+                }
+              >
                 Chamar no WhatsApp
               </a>
             </li>

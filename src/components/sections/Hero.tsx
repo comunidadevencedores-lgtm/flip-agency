@@ -1,7 +1,11 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { WA_LINK } from '@/lib/data';
 import styles from './Hero.module.css';
+import { track } from '@/lib/analytics/track';
+import { getAttribution } from '@/lib/analytics/attribution';
 
 export default function Hero() {
   return (
@@ -37,6 +41,13 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer nofollow"
               className={styles.btnPrimary}
+              onClick={() =>
+                track('whatsapp_click', {
+                  click_location: 'hero',
+                  value: 1,
+                  ...getAttribution(),
+                })
+              }
             >
               Quero crescer com a Bowl
             </a>

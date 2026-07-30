@@ -1,6 +1,10 @@
+'use client'
+
 import { HELP_OPTIONS, buildWaLink } from '@/lib/data';
 import { WhatsAppIcon } from '@/components/ui/Icons';
 import styles from './HelpTriage.module.css';
+import { track } from '@/lib/analytics/track';
+import { getAttribution } from '@/lib/analytics/attribution';
 
 /**
  * "Como podemos te ajudar?"
@@ -28,6 +32,14 @@ export default function HelpTriage() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.option}
+            onClick={() =>
+              track('whatsapp_click', {
+                click_location: 'triage',
+                option_label: opt.label,
+                value: 1,
+                ...getAttribution(),
+              })
+            }
           >
             <span>{opt.label}</span>
             <WhatsAppIcon size={18} className={styles.optionIcon} />

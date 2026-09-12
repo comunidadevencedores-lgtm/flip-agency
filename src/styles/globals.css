@@ -235,6 +235,11 @@ p {
   text-align: center;
 }
 
+.section-header--center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* =========================
    GRID
 ========================= */

@@ -7,7 +7,7 @@ import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { SITE } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Pacotes | ${SITE.name}`,
+  title: 'Pacotes e Planos de Marketing Digital',
   description: 'Planos mensais e sem fidelidade, do negócio que está começando até quem quer escalar de verdade. Veja os pacotes da Bowl Digital.',
   alternates: { canonical: `${SITE.url}/pacotes` },
 };

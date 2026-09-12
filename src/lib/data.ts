@@ -182,14 +182,14 @@ export const CASES: Case[] = [
   },
   {
     id: 'case-02',
-    client: 'FAW Consórcio Barigui',
-    segment: 'Consórcios · Embracon',
+    client: 'R4 Imobiliária',
+    segment: 'Imóveis · Alto Padrão',
     type: 'case',
-    thumbnail: '/images/case-faw.jpg',
-    tags: ['Next.js', 'Supabase', 'Simulador', 'Captação de leads'],
-    result: 'Simulador de parcelas com captura progressiva de leads',
+    thumbnail: '/images/case-r4-imobiliaria.jpg',
+    tags: ['Next.js', 'Curadoria de Imóveis', 'Captação via WhatsApp'],
+    result: 'Site com curadoria de lançamentos e atendimento direto via WhatsApp',
     description:
-      'Site completo para consultor de consórcios Embracon, com simulador de parcelas em tempo real, captura progressiva de leads, rastreamento de UTM/gclid e conformidade com LGPD.',
+      'Site institucional para imobiliária especializada em empreendimentos novos e de alto padrão em Curitiba, com busca de imóveis por tipo e faixa de preço, curadoria de lançamentos e atendimento direto via WhatsApp, sem formulários longos.',
   },
 ];
 
@@ -201,16 +201,16 @@ export const PORTFOLIO: PortfolioItem[] = [
     type: 'portfolio',
     thumbnail: '/images/port-republica.jpg',
     tags: ['Google Ads', 'Instagram', 'Supabase'],
-    url: '#',
+    url: 'https://republicadobarbeiro.com.br',
   },
   {
     id: 'port-02',
-    title: 'FAW Consórcio Barigui',
-    category: 'Site & Sistema · Consórcios',
+    title: 'R4 Imobiliária',
+    category: 'Site & Sistema · Imóveis',
     type: 'portfolio',
-    thumbnail: '/images/port-faw.jpg',
-    tags: ['Next.js', 'Supabase', 'Simulador'],
-    url: '#',
+    thumbnail: '/images/port-r4-imobiliaria.jpg',
+    tags: ['Next.js', 'Curadoria de Imóveis', 'WhatsApp'],
+    url: 'https://imobiliaria-hub.vercel.app',
   },
   {
     id: 'port-03',
@@ -219,7 +219,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     type: 'portfolio',
     thumbnail: '/images/port-buzzi-crm.jpg',
     tags: ['CRM', 'WhatsApp + IA', 'Kanban'],
-    url: '#',
+    url: 'https://www.buzziodontologia.com.br',
   },
   {
     id: 'port-04',
@@ -228,7 +228,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     type: 'portfolio',
     thumbnail: '/images/port-dd.jpg',
     tags: ['Gestão de Tráfego', 'Social Media'],
-    url: '#',
+    url: 'https://ddradiadores.com.br',
   },
 ];
 

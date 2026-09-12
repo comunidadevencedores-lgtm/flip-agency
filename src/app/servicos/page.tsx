@@ -7,7 +7,7 @@ import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { SITE } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Serviços | ${SITE.name}`,
+  title: 'Serviços: Sites, Tráfego Pago, SEO e Automação',
   description: 'Sites e sistemas sob medida, tráfego pago, redes sociais, automação e SEO. Conheça todos os serviços da Bowl Digital.',
   alternates: { canonical: `${SITE.url}/servicos` },
 };

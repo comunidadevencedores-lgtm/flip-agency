@@ -7,7 +7,9 @@ import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { SITE } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Sobre | ${SITE.name}`,
+  title: {
+    absolute: 'Sobre a Bowl Digital | Agência em Curitiba',
+  },
   description: 'Conheça a Bowl Digital — agência full service em Curitiba, PR. Nossa história, equipe e valores.',
   alternates: { canonical: `${SITE.url}/sobre` },
 };

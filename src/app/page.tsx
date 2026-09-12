@@ -9,8 +9,11 @@ import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { SITE } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `${SITE.fullName} — ${SITE.tagline}`,
-  description: SITE.description,
+  title: {
+    absolute: 'Bowl Digital | Agência de Marketing Digital em Curitiba',
+  },
+  description:
+    'Agência full service em Curitiba: sites, tráfego pago, SEO e automação para gerar mais clientes. Fale com a Bowl Digital.',
 };
 
 export default function Home() {

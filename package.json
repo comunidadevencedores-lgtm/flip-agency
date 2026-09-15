@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "doctor": "npx react-doctor@latest"
   },
   "dependencies": {
     "critters": "^0.0.23",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.35",
+    "react-doctor": "^0.9.14",
     "typescript": "^5"
   }
 }

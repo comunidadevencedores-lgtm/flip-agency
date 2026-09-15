@@ -121,7 +121,7 @@ export default function RootLayout({
                 availableLanguage: 'Portuguese',
               },
               sameAs: [SITE.instagram, SITE.linkedin, SITE.facebook].filter(Boolean),
-            }),
+            }).replace(/</g, '\\u003c'),
           }}
         />
       </head>
@@ -132,6 +132,8 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-NDMFFPDW"
             height="0"
             width="0"
+            title="Google Tag Manager"
+            sandbox=""
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
